@@ -28,31 +28,60 @@ function seleccionarMascotaJugador(){
         let moke6 = document.getElementById("pydos");
         console.log(moke6)
 
+        // Clase 20: capturar elemento <span></span>
+
+        let showMascotaJugador = document.getElementById("mascota-jugador");
+        console.log(showMascotaJugador);
+
         // Mostrar la mascota seleccionada
 
         switch (true) {
             case moke1.checked:
-                alert (`Seleccionaste a tu mascota: ${moke1.value}`)
+                //alert (`Seleccionaste a tu mascota: ${moke1.value}`)
+
+                // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                showMascotaJugador.innerHTML = moke1.value
                 break;
+
             case moke2.checked:
-                alert (`Seleccionaste a tu mascota: ${moke2.value}`)
+                //alert (`Seleccionaste a tu mascota: ${moke2.value}`)
+                // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                showMascotaJugador.innerHTML = moke2.value
                 break;    
             case moke3.checked:
-                alert (`Seleccionaste a tu mascota: ${moke3.value}`)
+                //alert (`Seleccionaste a tu mascota: ${moke3.value}`)
+
+                // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                showMascotaJugador.innerHTML = moke3.value
                 break;  
             case moke4.checked:
-                alert (`Seleccionaste a tu mascota: ${moke4.value}`)
+                //alert (`Seleccionaste a tu mascota: ${moke4.value}`)
+                // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                showMascotaJugador.innerHTML = moke4.value
                 break;  
             case moke5.checked:
-                alert (`Seleccionaste a tu mascota: ${moke5.value}`)
+                //alert (`Seleccionaste a tu mascota: ${moke5.value}`)
+
+                // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                showMascotaJugador.innerHTML = moke5.value
                 break; 
             case moke6.checked:
-                alert (`Seleccionaste a tu mascota: ${moke6.value}`)
+                //alert (`Seleccionaste a tu mascota: ${moke6.value}`)
+
+                // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                showMascotaJugador.innerHTML = moke6.value
                 break;                  
             default:
                 alert(`No has seleccionado ninguna mascota`)
                 break;
         }
+
+
+
+
+
+        
+        
 }
 
 window.addEventListener("load", iniciarJuego);
