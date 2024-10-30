@@ -1,3 +1,4 @@
+let ataqueJugador;
 
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById("boton-mascota");
@@ -143,31 +144,24 @@ function seleccionarMascotaEnemigo(){
 // Clase 23: Funciones para los ataques del jugador
 
 function ataqueFuego() {
-    let ataqueJugador;
-
-    let showAtaqueJugador = document.getElementById("ataque-jugador");
-
     ataqueJugador = "Fuego"
-
-    showAtaqueJugador.innerHTML=ataqueJugador;
+    imprimirAtaque(ataqueJugador);
 }
 
 function ataqueTierra() {
-    let ataqueJugador;
-
-    let showAtaqueJugador = document.getElementById("ataque-jugador");
-
     ataqueJugador = "Tierra"   
-    showAtaqueJugador.innerHTML=ataqueJugador;
+    imprimirAtaque(ataqueJugador);
 }
 
 function ataqueAgua() {
-    let ataqueJugador;
-
-    let showAtaqueJugador = document.getElementById("ataque-jugador");
-
     ataqueJugador = "Agua"
-    showAtaqueJugador.innerHTML=ataqueJugador;
+    imprimirAtaque(ataqueJugador);
+
+}
+
+function imprimirAtaque(ataque) {
+    let showAtaqueJugador = document.getElementById("ataque-jugador");
+    showAtaqueJugador.innerHTML=ataque;
 }
 
 
