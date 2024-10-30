@@ -1,8 +1,19 @@
 
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById("boton-mascota");
-    console.log(botonMascotaJugador);
+    //Clase 23 Capturar los botones de ataque
+
+    let btnFuego = document.getElementById("boton-fuego");
+    let btnTierra = document.getElementById("boton-tierra");
+    let btnAgua = document.getElementById("boton-agua");
+
+    // Eventos 
+
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
+
+    btnFuego.addEventListener("click",ataqueFuego);
+    btnTierra.addEventListener("click",ataqueTierra);
+    btnAgua.addEventListener("click",ataqueAgua);
 
 }
 
@@ -79,9 +90,7 @@ function seleccionarMascotaJugador(){
         seleccionarMascotaEnemigo();
 }
 
-
-
-// Clase 21: Crear funcion para obtener un numero aleatorio entre un rango
+// Clase 22: Crear funcion para obtener un numero aleatorio entre un rango
 
 function aleatorio(max, min) {
 
@@ -131,8 +140,39 @@ function seleccionarMascotaEnemigo(){
     } 
 }
 
+// Clase 23: Funciones para los ataques del jugador
+
+function ataqueFuego() {
+    let ataqueJugador;
+
+    let showAtaqueJugador = document.getElementById("ataque-jugador");
+
+    ataqueJugador = "Fuego"
+
+    showAtaqueJugador.innerHTML=ataqueJugador;
+}
+
+function ataqueTierra() {
+    let ataqueJugador;
+
+    let showAtaqueJugador = document.getElementById("ataque-jugador");
+
+    ataqueJugador = "Tierra"   
+    showAtaqueJugador.innerHTML=ataqueJugador;
+}
+
+function ataqueAgua() {
+    let ataqueJugador;
+
+    let showAtaqueJugador = document.getElementById("ataque-jugador");
+
+    ataqueJugador = "Agua"
+    showAtaqueJugador.innerHTML=ataqueJugador;
+}
+
 
 // Inicio del juego
 
 window.addEventListener("load", iniciarJuego);
+
 
