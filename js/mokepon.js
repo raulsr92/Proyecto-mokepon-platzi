@@ -1,4 +1,5 @@
 let ataqueJugador;
+let ataqueEnemigo;
 
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById("boton-mascota");
@@ -162,7 +163,7 @@ function ataqueTierra() {
 function ataqueAgua() {
     ataqueJugador = "Agua"
     imprimirAtaque(ataqueJugador);
-    
+
     // Invocar a la elección aleatorio del ataque del enemigo
         ataqueAleatorioEnemigo();
 }
@@ -183,15 +184,19 @@ function ataqueAleatorioEnemigo() {
 
     switch (ataqueAleatorio) {
         case 1:
-            showAtaqueEnemigo.innerHTML = "Fuego"
+            ataqueEnemigo = "Fuego"
             break;
         case 2:
-            showAtaqueEnemigo.innerHTML = "Agua"
+            ataqueEnemigo = "Agua"
             break;
         default:
-            showAtaqueEnemigo.innerHTML = "Tierra"
+            ataqueEnemigo = "Tierra"
             break;
+    
     }
+    // La impresión se coloca fuera del switch porque el switch solo se utiliza para asignar un valor a la var ataqueEnemigo
+
+    showAtaqueEnemigo.innerHTML = ataqueEnemigo
 }
 
 
