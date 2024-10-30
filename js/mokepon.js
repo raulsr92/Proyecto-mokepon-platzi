@@ -146,22 +146,52 @@ function seleccionarMascotaEnemigo(){
 function ataqueFuego() {
     ataqueJugador = "Fuego"
     imprimirAtaque(ataqueJugador);
+
+    // Invocar a la elección aleatorio del ataque del enemigo
+        ataqueAleatorioEnemigo();
 }
 
 function ataqueTierra() {
     ataqueJugador = "Tierra"   
     imprimirAtaque(ataqueJugador);
+
+    // Invocar a la elección aleatorio del ataque del enemigo
+        ataqueAleatorioEnemigo();
 }
 
 function ataqueAgua() {
     ataqueJugador = "Agua"
     imprimirAtaque(ataqueJugador);
-
+    
+    // Invocar a la elección aleatorio del ataque del enemigo
+        ataqueAleatorioEnemigo();
 }
 
 function imprimirAtaque(ataque) {
     let showAtaqueJugador = document.getElementById("ataque-jugador");
     showAtaqueJugador.innerHTML=ataque;
+}
+
+// Clase 24: Ataque aleatorio del enemigo
+
+function ataqueAleatorioEnemigo() {
+    
+    let ataqueAleatorio = aleatorio(3,1);
+    console.log(ataqueAleatorio);
+
+    let showAtaqueEnemigo = document.getElementById("ataque-enemigo");
+
+    switch (ataqueAleatorio) {
+        case 1:
+            showAtaqueEnemigo.innerHTML = "Fuego"
+            break;
+        case 2:
+            showAtaqueEnemigo.innerHTML = "Agua"
+            break;
+        default:
+            showAtaqueEnemigo.innerHTML = "Tierra"
+            break;
+    }
 }
 
 
