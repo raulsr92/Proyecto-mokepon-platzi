@@ -146,7 +146,7 @@ function seleccionarMascotaEnemigo(){
 
 function ataqueFuego() {
     ataqueJugador = "Fuego"
-    imprimirAtaque(ataqueJugador);
+    //imprimirAtaque(ataqueJugador);
 
     // Invocar a la elección aleatorio del ataque del enemigo
         ataqueAleatorioEnemigo();
@@ -154,7 +154,8 @@ function ataqueFuego() {
 
 function ataqueTierra() {
     ataqueJugador = "Tierra"   
-    imprimirAtaque(ataqueJugador);
+   
+   // imprimirAtaque(ataqueJugador);
 
     // Invocar a la elección aleatorio del ataque del enemigo
         ataqueAleatorioEnemigo();
@@ -162,16 +163,16 @@ function ataqueTierra() {
 
 function ataqueAgua() {
     ataqueJugador = "Agua"
-    imprimirAtaque(ataqueJugador);
+    //imprimirAtaque(ataqueJugador);
 
     // Invocar a la elección aleatorio del ataque del enemigo
         ataqueAleatorioEnemigo();
 }
 
-function imprimirAtaque(ataque) {
+/*function imprimirAtaque(ataque) {
     let showAtaqueJugador = document.getElementById("ataque-jugador");
     showAtaqueJugador.innerHTML=ataque;
-}
+}*/
 
 // Clase 24: Ataque aleatorio del enemigo
 
@@ -179,7 +180,6 @@ function ataqueAleatorioEnemigo() {
     
     let ataqueAleatorio = aleatorio(3,1);
     console.log(ataqueAleatorio);
-
     let showAtaqueEnemigo = document.getElementById("ataque-enemigo");
 
     switch (ataqueAleatorio) {
@@ -192,11 +192,32 @@ function ataqueAleatorioEnemigo() {
         default:
             ataqueEnemigo = "Tierra"
             break;
-    
     }
     // La impresión se coloca fuera del switch porque el switch solo se utiliza para asignar un valor a la var ataqueEnemigo
 
-    showAtaqueEnemigo.innerHTML = ataqueEnemigo
+    //showAtaqueEnemigo.innerHTML = ataqueEnemigo
+
+    crearMensaje();
+}
+
+// Clase 25: Función para insertar nuevos párrafos
+
+function crearMensaje() {
+
+    // 1° Crear párrafo y almacenarlo en una variable
+
+    let parrafo = document.createElement("div");
+
+    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, ¡Ganaste 🥳!`;
+
+    console.log(parrafo);
+
+    // 2° Ubicar párrafo
+
+    let contendorParrafo = document.getElementById("mensajes");
+
+    contendorParrafo.append(parrafo);
+
 }
 
 
