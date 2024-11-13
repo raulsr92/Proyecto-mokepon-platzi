@@ -1,5 +1,6 @@
 let ataqueJugador;
 let ataqueEnemigo;
+let resultado;
 
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById("boton-mascota");
@@ -195,8 +196,9 @@ function ataqueAleatorioEnemigo() {
     }
     // La impresión se coloca fuera del switch porque el switch solo se utiliza para asignar un valor a la var ataqueEnemigo
 
+    // antes de mostrar mensaje, obtenemos resultado de partida
+    obtenerResultado();
     //showAtaqueEnemigo.innerHTML = ataqueEnemigo
-
     crearMensaje();
 }
 
@@ -208,7 +210,7 @@ function crearMensaje() {
 
     let parrafo = document.createElement("div");
 
-    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, ¡Ganaste 🥳!`;
+    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, Resultado: ${resultado}`;
 
     console.log(parrafo);
 
@@ -220,6 +222,28 @@ function crearMensaje() {
 
 }
 
+function obtenerResultado(){
+
+    // asignar un valor número a los ataques (Fuego = 1, Tierra = 2, Agua = 3)
+
+    if (ataqueJugador==ataqueEnemigo) {
+
+        resultado = "Empate"
+    } 
+    else if(ataqueJugador=="Agua"){
+
+        resultado = "Ganaste"  
+        // Porque el agua vence a ambos y si pasó el primer condicional, no son iguales, osea el enemigo es tierra o fuego
+
+    } 
+    else if(ataqueJugador == "Tierra" && ataqueEnemigo=="Fuego"){
+
+        resultado = "Ganaste" // Porque tierra vence a fuego
+    }
+    else{
+        resultado= "Perdiste"  // en todos los escenarios restantes, pierdes
+    }
+}
 
 // Inicio del juego
 
