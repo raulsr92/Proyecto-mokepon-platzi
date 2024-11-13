@@ -1,6 +1,7 @@
 let ataqueJugador;
 let ataqueEnemigo;
 let resultado;
+let mascotaSeleccionada;
 
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById("boton-mascota");
@@ -14,6 +15,7 @@ function iniciarJuego() {
 
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
 
+   
     btnFuego.addEventListener("click",ataqueFuego);
     btnTierra.addEventListener("click",ataqueTierra);
     btnAgua.addEventListener("click",ataqueAgua);
@@ -23,73 +25,61 @@ function iniciarJuego() {
 function seleccionarMascotaJugador(){
     
         // Capturar mascotas en variables
-
         let moke1 = document.getElementById("hipodoge");
-        console.log(moke1)
-    
         let moke2 = document.getElementById("capipepo");
-        console.log(moke2)
-    
         let moke3 = document.getElementById("ratigueya");
-        console.log(moke3)
-    
         let moke4 = document.getElementById("langostelvis");
-        console.log(moke4)
-    
         let moke5 = document.getElementById("tucapalma");
-        console.log(moke5)
-    
         let moke6 = document.getElementById("pydos");
-        console.log(moke6)
 
         // Clase 20: capturar elemento <span></span>
-
         let showMascotaJugador = document.getElementById("mascota-jugador");
         console.log(showMascotaJugador);
 
         // Mostrar la mascota seleccionada
-
         switch (true) {
             case moke1.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke1.value}`)
-
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                mascotaSeleccionada=1;
                 showMascotaJugador.innerHTML = moke1.value
                 break;
 
             case moke2.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke2.value}`)
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                mascotaSeleccionada=2;
                 showMascotaJugador.innerHTML = moke2.value
                 break;    
             case moke3.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke3.value}`)
 
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                mascotaSeleccionada=3;
                 showMascotaJugador.innerHTML = moke3.value
                 break;  
             case moke4.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke4.value}`)
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                mascotaSeleccionada=4;
                 showMascotaJugador.innerHTML = moke4.value
                 break;  
             case moke5.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke5.value}`)
-
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                mascotaSeleccionada=5;
                 showMascotaJugador.innerHTML = moke5.value
                 break; 
             case moke6.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke6.value}`)
-
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
+                mascotaSeleccionada=6;
                 showMascotaJugador.innerHTML = moke6.value
                 break;                  
             default:
                 alert(`No has seleccionado ninguna mascota`)
                 break;
         } 
-
         seleccionarMascotaEnemigo();
 }
 
@@ -146,28 +136,55 @@ function seleccionarMascotaEnemigo(){
 // Clase 23: Funciones para los ataques del jugador
 
 function ataqueFuego() {
-    ataqueJugador = "Fuego"
-    //imprimirAtaque(ataqueJugador);
-
-    // Invocar a la elección aleatorio del ataque del enemigo
+    // Condicional para desabilitar botones segun el pokemon seleccionado
+    // mascotas de fuego = 3, 4, 6
+    // mascotas de agua = 1, 4, 5
+    // mascotas de tierra = 2, 5, 6
+    if (mascotaSeleccionada==3 || mascotaSeleccionada==4|| mascotaSeleccionada==6) {
+        ataqueJugador = "Fuego"
+        //imprimirAtaque(ataqueJugador);
+    
+        // Invocar a la elección aleatorio del ataque del enemigo
         ataqueAleatorioEnemigo();
+    } else{
+        alertaAtaqueEscogido();
+    }
 }
 
 function ataqueTierra() {
-    ataqueJugador = "Tierra"   
-   
-   // imprimirAtaque(ataqueJugador);
+    // Condicional para desabilitar botones segun el pokemon seleccionado
+    // mascotas de fuego = 3, 4, 6
+    // mascotas de agua = 1, 4, 5
+    // mascotas de tierra = 2, 5, 6
 
-    // Invocar a la elección aleatorio del ataque del enemigo
-        ataqueAleatorioEnemigo();
+    if (mascotaSeleccionada==2 || mascotaSeleccionada==5|| mascotaSeleccionada==6) {
+        ataqueJugador = "Tierra"   
+   
+        // imprimirAtaque(ataqueJugador);
+     
+         // Invocar a la elección aleatorio del ataque del enemigo
+             ataqueAleatorioEnemigo();
+    } else{
+        alertaAtaqueEscogido();
+    }
 }
 
 function ataqueAgua() {
-    ataqueJugador = "Agua"
-    //imprimirAtaque(ataqueJugador);
 
-    // Invocar a la elección aleatorio del ataque del enemigo
+    // Condicional para desabilitar botones segun el pokemon seleccionado
+    // mascotas de fuego = 3, 4, 6
+    // mascotas de agua = 1, 4, 5
+    // mascotas de tierra = 2, 5, 6
+
+    if (mascotaSeleccionada==1 || mascotaSeleccionada==4|| mascotaSeleccionada==5) {
+        ataqueJugador = "Agua"
+        //imprimirAtaque(ataqueJugador);
+    
+        // Invocar a la elección aleatorio del ataque del enemigo
         ataqueAleatorioEnemigo();
+    } else{
+        alertaAtaqueEscogido();
+    }
 }
 
 /*function imprimirAtaque(ataque) {
@@ -243,6 +260,14 @@ function obtenerResultado(){
     else{
         resultado= "Perdiste"  // en todos los escenarios restantes, pierdes
     }
+}
+
+// Crear fución de alerta que imposibiliza ataque por el mokepon elegido
+
+function alertaAtaqueEscogido() {
+
+    alert("Lo siento!😩 El mokepon escogido no cuenta con ese ataque")
+    
 }
 
 // Inicio del juego
