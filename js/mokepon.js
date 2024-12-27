@@ -299,15 +299,31 @@ function crearMensaje() {
     showVidasJugador.innerHTML = vidasJugador
     showVidasEnemigo.innerHTML = vidasEnemigo
 
-    // Preguntar si el jugador o enemigo tienen vidas
+    // Preguntar si el jugador o enemigo tienen vidas (esto puede ir dentro de la función)
 
     if(vidasJugador==0){
+        crearMensajeFinal("Perdiste!, te quedaste sin vidas.")
         alert("Usted ha PERDIDO la partida")
     } else if(vidasEnemigo==0){
+        crearMensajeFinal("Ganaste!, tu competidor se quedó sin vidas.")
         alert("Usted ha GANADO la partida")
-
     }
+}
 
+function crearMensajeFinal(resultadoFinal) {
+
+       // 1° Crear párrafo y almacenarlo en una variable
+
+       let parrafo = document.createElement("div");
+
+       parrafo.innerHTML = resultadoFinal;
+      
+       // 2° Ubicar párrafo (al final de los párrafos agregados en cada partida)
+   
+       let contendorParrafo = document.getElementById("mensajes");
+   
+       contendorParrafo.append(parrafo);
+    
 }
 
 function obtenerResultado(){
