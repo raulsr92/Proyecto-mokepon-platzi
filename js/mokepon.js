@@ -191,16 +191,22 @@ function ataqueTierra() {
     // mascotas de agua = 1, 4, 5
     // mascotas de tierra = 2, 5, 6
 
-    if (mascotaSeleccionada==2 || mascotaSeleccionada==5|| mascotaSeleccionada==6) {
-        ataqueJugador = "Tierra"   
-   
-        // imprimirAtaque(ataqueJugador);
-     
-         // Invocar a la elección aleatorio del ataque del enemigo
-             ataqueAleatorioEnemigo();
-    } else{
-        alertaAtaqueEscogido();
+    if (vidasJugador>0){
+        if (mascotaSeleccionada==2 || mascotaSeleccionada==5|| mascotaSeleccionada==6) {
+            ataqueJugador = "Tierra"   
+       
+            // imprimirAtaque(ataqueJugador);
+         
+             // Invocar a la elección aleatorio del ataque del enemigo
+                 ataqueAleatorioEnemigo();
+        } else{
+            alertaAtaqueEscogido();
+        }
+    }else{
+        alertaVidas();
     }
+
+
 }
 
 function ataqueAgua() {
@@ -210,15 +216,21 @@ function ataqueAgua() {
     // mascotas de agua = 1, 4, 5
     // mascotas de tierra = 2, 5, 6
 
-    if (mascotaSeleccionada==1 || mascotaSeleccionada==4|| mascotaSeleccionada==5) {
-        ataqueJugador = "Agua"
-        //imprimirAtaque(ataqueJugador);
-    
-        // Invocar a la elección aleatorio del ataque del enemigo
-        ataqueAleatorioEnemigo();
-    } else{
-        alertaAtaqueEscogido();
+    if (vidasJugador>0){
+        if (mascotaSeleccionada==1 || mascotaSeleccionada==4|| mascotaSeleccionada==5) {
+            ataqueJugador = "Agua"
+            //imprimirAtaque(ataqueJugador);
+        
+            // Invocar a la elección aleatorio del ataque del enemigo
+            ataqueAleatorioEnemigo();
+        } else{
+            alertaAtaqueEscogido();
+        }
+    }else{
+        alertaVidas();
     }
+
+
 }
 
 /*function imprimirAtaque(ataque) {
@@ -299,8 +311,6 @@ function crearMensaje() {
 }
 
 function obtenerResultado(){
-
-            // asignar un valor número a los ataques (Fuego = 1, Tierra = 2, Agua = 3)
 
         if (ataqueJugador==ataqueEnemigo) {
             resultado = "Empate"
