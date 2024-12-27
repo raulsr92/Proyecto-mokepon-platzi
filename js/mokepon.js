@@ -19,13 +19,19 @@ function iniciarJuego() {
     let btnTierra = document.getElementById("boton-tierra");
     let btnAgua = document.getElementById("boton-agua");
 
+    //Clase 26 Capturar btn de capturar
+
+    let btnReiniciar = document.getElementById("boton-reiniciar");
+
     // Eventos 
 
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
-   
+
     btnFuego.addEventListener("click",ataqueFuego);
     btnTierra.addEventListener("click",ataqueTierra);
     btnAgua.addEventListener("click",ataqueAgua);
+
+    btnReiniciar.addEventListener("click", reiniciarJuego);
 }
 
 function seleccionarMascotaJugador(){
@@ -337,6 +343,31 @@ function  alertaVidasEnemigo(params) {
 
     alert("El enemigo se quedó sin vidas 😩")
 
+}
+
+function reiniciarJuego() {
+    // Clase 26 - 1° Reiniciamos las vidas
+        vidasJugador = 3; 
+        vidasEnemigo = 3;
+    
+    // 2° Reimprimimos
+        //Capturar elementos span donde se muestran las vidas del jugador y el enemigo
+
+        let showVidasJugador = document.getElementById("vidas-jugador");
+        let showVidasEnemigo = document.getElementById("vidas-enemigo");
+
+        // Vaciar el número que se indica en vidas, porque al reiniciar el juego ese span debe estar vacío, como
+        // cuando recien carga el juego
+        showVidasJugador.innerHTML = ""
+        showVidasEnemigo.innerHTML = ""
+    
+    // 3° Borrar los párrafos creados por cada juego
+
+
+    let contendorParrafo = document.getElementById("mensajes");
+
+    contendorParrafo.innerHTML = ""
+    
 }
 
 // Inicio del juego
