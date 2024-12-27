@@ -3,7 +3,15 @@ let ataqueEnemigo;
 let resultado;
 let mascotaSeleccionada;
 
+let vidasJugador =0;
+let vidasEnemigo =0;
+
 function iniciarJuego() {
+
+    // Clase 26 - Creando sistema de vidas
+    vidasJugador = 3; 
+    vidasEnemigo = 3;
+
     let botonMascotaJugador = document.getElementById("boton-mascota");
     //Clase 23 Capturar los botones de ataque
 
@@ -14,12 +22,10 @@ function iniciarJuego() {
     // Eventos 
 
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
-
    
     btnFuego.addEventListener("click",ataqueFuego);
     btnTierra.addEventListener("click",ataqueTierra);
     btnAgua.addEventListener("click",ataqueAgua);
-
 }
 
 function seleccionarMascotaJugador(){
@@ -35,6 +41,11 @@ function seleccionarMascotaJugador(){
         // Clase 20: capturar elemento <span></span>
         let showMascotaJugador = document.getElementById("mascota-jugador");
         console.log(showMascotaJugador);
+
+        // Clase 26: capturar elementos span donde se muestran las vidas del jugador y el enemigo
+
+        let showVidasJugador = document.getElementById("vidas-jugador");
+        let showVidasEnemigo = document.getElementById("vidas-enemigo");
 
         // Mostrar la mascota seleccionada
         switch (true) {
@@ -80,7 +91,14 @@ function seleccionarMascotaJugador(){
                 alert(`No has seleccionado ninguna mascota`)
                 break;
         } 
+        
         seleccionarMascotaEnemigo();
+
+        // Clase 26: mostrar vidas en span
+
+        showVidasJugador.innerHTML = vidasJugador
+        showVidasEnemigo.innerHTML = vidasEnemigo
+
 }
 
 // Clase 22: Crear funcion para obtener un numero aleatorio entre un rango
@@ -131,6 +149,7 @@ function seleccionarMascotaEnemigo(){
             showMascotaEnemigo.innerHTML = moke6.value
             break;
     } 
+
 }
 
 // Clase 23: Funciones para los ataques del jugador
@@ -140,14 +159,23 @@ function ataqueFuego() {
     // mascotas de fuego = 3, 4, 6
     // mascotas de agua = 1, 4, 5
     // mascotas de tierra = 2, 5, 6
-    if (mascotaSeleccionada==3 || mascotaSeleccionada==4|| mascotaSeleccionada==6) {
-        ataqueJugador = "Fuego"
-        //imprimirAtaque(ataqueJugador);
-    
-        // Invocar a la elección aleatorio del ataque del enemigo
-        ataqueAleatorioEnemigo();
+
+    // Clase 26: Establecer condicional para preguntar si el jugador cuenta con vidas
+
+    if (vidasJugador>0) {
+
+        if (mascotaSeleccionada==3 || mascotaSeleccionada==4|| mascotaSeleccionada==6) {
+            ataqueJugador = "Fuego"
+            //imprimirAtaque(ataqueJugador);
+        
+            // Invocar a la elección aleatorio del ataque del enemigo
+            ataqueAleatorioEnemigo();
+        } else{
+            alertaAtaqueEscogido();
+        }  
+
     } else{
-        alertaAtaqueEscogido();
+        alertaVidas();
     }
 }
 
@@ -195,35 +223,43 @@ function ataqueAgua() {
 // Clase 24: Ataque aleatorio del enemigo
 
 function ataqueAleatorioEnemigo() {
+    if (vidasEnemigo>0) {
+        let ataqueAleatorio = aleatorio(3,1);
+        console.log(ataqueAleatorio);
+        let showAtaqueEnemigo = document.getElementById("ataque-enemigo");
     
-    let ataqueAleatorio = aleatorio(3,1);
-    console.log(ataqueAleatorio);
-    let showAtaqueEnemigo = document.getElementById("ataque-enemigo");
+        switch (ataqueAleatorio) {
+            case 1:
+                ataqueEnemigo = "Fuego"
+                break;
+            case 2:
+                ataqueEnemigo = "Agua"
+                break;
+            default:
+                ataqueEnemigo = "Tierra"
+                break;
+        }
+        // La impresión se coloca fuera del switch porque el switch solo se utiliza para asignar un valor a la var ataqueEnemigo
+        // antes de mostrar mensaje, obtenemos resultado de partida
 
-    switch (ataqueAleatorio) {
-        case 1:
-            ataqueEnemigo = "Fuego"
-            break;
-        case 2:
-            ataqueEnemigo = "Agua"
-            break;
-        default:
-            ataqueEnemigo = "Tierra"
-            break;
+            obtenerResultado();
+            //showAtaqueEnemigo.innerHTML = ataqueEnemigo
+            crearMensaje();
+        
+
+        
+    } else{
+        alertaVidasEnemigo()
     }
-    // La impresión se coloca fuera del switch porque el switch solo se utiliza para asignar un valor a la var ataqueEnemigo
+    
 
-    // antes de mostrar mensaje, obtenemos resultado de partida
-    obtenerResultado();
-    //showAtaqueEnemigo.innerHTML = ataqueEnemigo
-    crearMensaje();
 }
 
 // Clase 25: Función para insertar nuevos párrafos
 
 function crearMensaje() {
 
-    // 1° Crear párrafo y almacenarlo en una variable
+   // 1° Crear párrafo y almacenarlo en una variable
 
     let parrafo = document.createElement("div");
 
@@ -237,29 +273,50 @@ function crearMensaje() {
 
     contendorParrafo.append(parrafo);
 
+    // Clase 26: volvemos a imprimir las vidas para que se actualice en el DOM
+
+    let showVidasJugador = document.getElementById("vidas-jugador");
+    let showVidasEnemigo = document.getElementById("vidas-enemigo");
+
+    showVidasJugador.innerHTML = vidasJugador
+    showVidasEnemigo.innerHTML = vidasEnemigo
+
+    // Preguntar si el jugador o enemigo tienen vidas
+
+    if(vidasJugador==0){
+        alert("Usted ha PERDIDO la partida")
+    } else if(vidasEnemigo==0){
+        alert("Usted ha GANADO la partida")
+
+    }
+
 }
 
 function obtenerResultado(){
 
-    // asignar un valor número a los ataques (Fuego = 1, Tierra = 2, Agua = 3)
+            // asignar un valor número a los ataques (Fuego = 1, Tierra = 2, Agua = 3)
 
-    if (ataqueJugador==ataqueEnemigo) {
+        if (ataqueJugador==ataqueEnemigo) {
+            resultado = "Empate"
+        } 
+        else if(ataqueJugador=="Agua"){
 
-        resultado = "Empate"
-    } 
-    else if(ataqueJugador=="Agua"){
+            resultado = "Ganaste"  
+            // Porque el agua vence a ambos y si pasó el primer condicional, no son iguales, osea el enemigo es tierra o fuego
 
-        resultado = "Ganaste"  
-        // Porque el agua vence a ambos y si pasó el primer condicional, no son iguales, osea el enemigo es tierra o fuego
+            vidasEnemigo -= 1;
+        } 
+        else if(ataqueJugador == "Tierra" && ataqueEnemigo=="Fuego"){
 
-    } 
-    else if(ataqueJugador == "Tierra" && ataqueEnemigo=="Fuego"){
+            resultado = "Ganaste" // Porque tierra vence a fuego
+            vidasEnemigo -= 1;
+        }
+        else{
+            resultado= "Perdiste"  // en todos los escenarios restantes, pierdes
+            vidasJugador -= 1;
+        }        
+    
 
-        resultado = "Ganaste" // Porque tierra vence a fuego
-    }
-    else{
-        resultado= "Perdiste"  // en todos los escenarios restantes, pierdes
-    }
 }
 
 // Crear fución de alerta que imposibiliza ataque por el mokepon elegido
@@ -268,6 +325,18 @@ function alertaAtaqueEscogido() {
 
     alert("Lo siento!😩 El mokepon escogido no cuenta con ese ataque")
     
+}
+
+function alertaVidas() {
+    
+    alert("Te quedaste sin vidas 😩")
+
+}
+
+function  alertaVidasEnemigo(params) {
+
+    alert("El enemigo se quedó sin vidas 😩")
+
 }
 
 // Inicio del juego
