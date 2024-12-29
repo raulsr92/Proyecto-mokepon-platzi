@@ -165,7 +165,6 @@ function ataqueFuego() {
     // mascotas de fuego = 3, 4, 6
     // mascotas de agua = 1, 4, 5
     // mascotas de tierra = 2, 5, 6
-
     // Clase 26: Establecer condicional para preguntar si el jugador cuenta con vidas
 
     if (vidasJugador>0) {
@@ -245,7 +244,7 @@ function ataqueAleatorioEnemigo() {
         let ataqueAleatorio = aleatorio(3,1);
         console.log(ataqueAleatorio);
         let showAtaqueEnemigo = document.getElementById("ataque-enemigo");
-    
+
         switch (ataqueAleatorio) {
             case 1:
                 ataqueEnemigo = "Fuego"
@@ -263,14 +262,9 @@ function ataqueAleatorioEnemigo() {
             obtenerResultado();
             //showAtaqueEnemigo.innerHTML = ataqueEnemigo
             crearMensaje();
-        
-
-        
     } else{
         alertaVidasEnemigo()
     }
-    
-
 }
 
 // Clase 25: Función para insertar nuevos párrafos
@@ -304,9 +298,13 @@ function crearMensaje() {
     if(vidasJugador==0){
         crearMensajeFinal("Perdiste!, te quedaste sin vidas.")
         alert("Usted ha PERDIDO la partida")
+        bloquearBotonAtaque()
+        
+
     } else if(vidasEnemigo==0){
         crearMensajeFinal("Ganaste!, tu competidor se quedó sin vidas.")
         alert("Usted ha GANADO la partida")
+        bloquearBotonAtaque()
     }
 }
 
@@ -324,6 +322,25 @@ function crearMensajeFinal(resultadoFinal) {
    
        contendorParrafo.append(parrafo);
     
+}
+
+function bloquearBotonAtaque() {
+        // Clase 30: Bloquear Botones de ataque
+
+            // 1° Capturar botones en array
+
+            let btnsAtaque = document.getElementsByClassName("btn-ataque");
+
+            console.log(btnsAtaque);
+
+            
+            // 2° Recorrer array de botones y añadirles la propiedad diasabled
+
+            for (let i = 0; i < btnsAtaque.length; i++) {
+
+                btnsAtaque[i].setAttribute("disabled","");
+                
+            }
 }
 
 function obtenerResultado(){
@@ -372,6 +389,7 @@ function  alertaVidasEnemigo(params) {
 }
 
 function reiniciarJuego() {
+    /*
     // Clase 26 - 1° Reiniciamos las vidas
         vidasJugador = 3; 
         vidasEnemigo = 3;
@@ -393,6 +411,10 @@ function reiniciarJuego() {
     let contendorParrafo = document.getElementById("mensajes");
 
     contendorParrafo.innerHTML = ""
+    */
+   //Clase 30: utilizando función JS reload( )
+
+   window.location.reload();
     
 }
 
