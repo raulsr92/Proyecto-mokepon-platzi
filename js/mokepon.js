@@ -38,6 +38,10 @@ function iniciarJuego() {
         // Sección del botón "Reiniciar"  
            hideANDShowHtmlElement("reiniciar")
 
+        // Sección de "Elegir ataque"
+
+           hideANDShowHtmlElement("seleccionar-ataque")
+
 }
 
 
@@ -106,6 +110,10 @@ function seleccionarMascotaJugador(){
         } 
         
         seleccionarMascotaEnemigo();
+
+        // Aparecer la secicón para "Elegir ataque"
+
+            hideANDShowHtmlElement("seleccionar-ataque");
 
         // Clase 26: mostrar vidas en span
 
