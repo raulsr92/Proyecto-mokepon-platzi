@@ -32,7 +32,14 @@ function iniciarJuego() {
     btnAgua.addEventListener("click",ataqueAgua);
 
     btnReiniciar.addEventListener("click", reiniciarJuego);
+
+    // Secciones a desaparecer al iniciar el juego:
+
+        // Sección del botón "Reiniciar"  
+           hideANDShowHtmlElement("reiniciar")
+
 }
+
 
 function seleccionarMascotaJugador(){
     
@@ -299,12 +306,20 @@ function crearMensaje() {
         crearMensajeFinal("Perdiste!, te quedaste sin vidas.")
         alert("Usted ha PERDIDO la partida")
         bloquearBotonAtaque()
+
+        // Aparecer Sección del botón "Reiniciar"  
+
+        hideANDShowHtmlElement("reiniciar")
         
 
     } else if(vidasEnemigo==0){
         crearMensajeFinal("Ganaste!, tu competidor se quedó sin vidas.")
         alert("Usted ha GANADO la partida")
         bloquearBotonAtaque()
+
+        // Aparecer Sección del botón "Reiniciar"  
+        
+        hideANDShowHtmlElement("reiniciar")
     }
 }
 
@@ -415,6 +430,29 @@ function reiniciarJuego() {
    //Clase 30: utilizando función JS reload( )
 
    window.location.reload();
+    
+}
+
+function hideANDShowHtmlElement(idElement) {
+
+    // Clase 31: Capturar elemento html a través de su ID
+
+        // Capturar elemento
+
+            let htmlElementToModify = document.getElementById(idElement);
+
+            console.log(htmlElementToModify);
+
+        // Aplicar propiedad para desaparecer elemento o hacerlo aparecer en caso este desaparecido
+
+            if(htmlElementToModify.style.display == ""){
+
+                htmlElementToModify.style.display = "none"
+
+            } else if (htmlElementToModify.style.display == "none")
+            {
+                htmlElementToModify.style.display = "block"
+            }
     
 }
 
