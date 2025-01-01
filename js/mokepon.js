@@ -71,6 +71,10 @@ function seleccionarMascotaJugador(){
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
                 mascotaSeleccionada=1;
                 showMascotaJugador.innerHTML = moke1.value
+
+                // Aparecer la secicón para "Elegir ataque"
+
+                 hideANDShowHtmlElement("seleccionar-ataque");
                 break;
 
             case moke2.checked:
@@ -78,6 +82,11 @@ function seleccionarMascotaJugador(){
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
                 mascotaSeleccionada=2;
                 showMascotaJugador.innerHTML = moke2.value
+
+                // Aparecer la secicón para "Elegir ataque"
+
+                hideANDShowHtmlElement("seleccionar-ataque");                
+                
                 break;    
             case moke3.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke3.value}`)
@@ -85,24 +94,42 @@ function seleccionarMascotaJugador(){
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
                 mascotaSeleccionada=3;
                 showMascotaJugador.innerHTML = moke3.value
+
+                // Aparecer la secicón para "Elegir ataque"
+
+                hideANDShowHtmlElement("seleccionar-ataque");                
+
                 break;  
             case moke4.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke4.value}`)
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
                 mascotaSeleccionada=4;
                 showMascotaJugador.innerHTML = moke4.value
+
+                // Aparecer la secicón para "Elegir ataque"
+
+                hideANDShowHtmlElement("seleccionar-ataque");
+
                 break;  
             case moke5.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke5.value}`)
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
                 mascotaSeleccionada=5;
                 showMascotaJugador.innerHTML = moke5.value
+
+                // Aparecer la secicón para "Elegir ataque"
+
+                hideANDShowHtmlElement("seleccionar-ataque");
+
                 break; 
             case moke6.checked:
                 //alert (`Seleccionaste a tu mascota: ${moke6.value}`)
                 // Clase 20: mostrar mascota seleccionada en el elemento SPAN
                 mascotaSeleccionada=6;
                 showMascotaJugador.innerHTML = moke6.value
+                // Aparecer la secicón para "Elegir ataque"
+
+                hideANDShowHtmlElement("seleccionar-ataque");
                 break;                  
             default:
                 alert(`No has seleccionado ninguna mascota`)
@@ -110,10 +137,6 @@ function seleccionarMascotaJugador(){
         } 
         
         seleccionarMascotaEnemigo();
-
-        // Aparecer la secicón para "Elegir ataque"
-
-            hideANDShowHtmlElement("seleccionar-ataque");
 
         // Clase 26: mostrar vidas en span
 
