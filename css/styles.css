@@ -9,8 +9,15 @@
 
 
 *{
+
     font-family: "Comic Neue", serif;
     font-weight: 300;
+}
+
+body{
+    background-image: url(/images/yellow-back.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 h1{
@@ -23,4 +30,5 @@ h1{
 h2{
     font-family: "Nunito Sans", serif;
 }
+
 
