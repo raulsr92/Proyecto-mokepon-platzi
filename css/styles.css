@@ -1,0 +1,26 @@
+
+/*Fuentes de texto */
+
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+*{
+    font-family: "Comic Neue", serif;
+    font-weight: 300;
+}
+
+h1{
+    color: #2E6BAF;
+    font-family: "Titan One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    font-family: "Nunito Sans", serif;
+}
+
