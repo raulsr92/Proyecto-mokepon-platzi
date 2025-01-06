@@ -26,6 +26,7 @@ main{
     display: flex;
     flex-direction: column;
     padding: 10px 20px 0px 20px;
+    row-gap: 15px;
 }
 
 h1{
@@ -38,6 +39,7 @@ h1{
 
 h2{
     font-family: "Nunito Sans", serif;
+    margin: 0;
 }
 
 .mascota-formulario{
@@ -53,4 +55,30 @@ h2{
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+}
+
+/* Convertir en contenedores flexbox a las secciones */
+
+#seleccionar-mascota{
+    display: flex;
+    column-gap: 20px;
+    flex-direction: column;
+    /*align-items: center;
+    justify-content: center;*/
+    row-gap: 15px;
+}
+
+#seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+}
+
+#mensajes{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+#reiniciar{
+    display: flex;
 }

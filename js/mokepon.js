@@ -513,7 +513,7 @@ function hideANDShowHtmlElement(idElement) {
 
             } else if (htmlElementToModify.style.display == "none")
             {
-                htmlElementToModify.style.display = "block"
+                htmlElementToModify.style.display = "flex"
             }
     
 }
