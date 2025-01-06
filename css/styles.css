@@ -18,6 +18,14 @@ body{
     background-image: url(../images/yellow-back.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 0px 20px;
 }
 
 h1{
@@ -25,10 +33,24 @@ h1{
     font-family: "Titan One", serif;
     font-weight: 400;
     font-style: normal;
+    align-self: center;
 }
 
 h2{
     font-family: "Nunito Sans", serif;
 }
 
+.mascota-formulario{
+    display: flex;
+    column-gap: 50px;
+}
 
+.btn-style1{
+    align-self: center;
+}
+
+.mascota-formulario > div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}

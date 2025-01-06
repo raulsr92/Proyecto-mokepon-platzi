@@ -42,6 +42,13 @@ function iniciarJuego() {
 
            hideANDShowHtmlElement("seleccionar-ataque")
 
+    // Clase 33: 
+
+    elementFormMascotas = document.querySelector(".mascota-formulario");
+
+    elementFormMascotas.addEventListener("submit",function(event){
+        event.preventDefault();
+    })
 }
 
 
@@ -510,6 +517,8 @@ function hideANDShowHtmlElement(idElement) {
             }
     
 }
+
+
 
 // Inicio del juego
 

@@ -9,78 +9,95 @@
 
 </head>
 <body>
+    <main>
+        <h1>MOKEPON! 🔥💧🌱 </h1>
 
-    <h1>MOKEPON! 🔥💧🌱 </h1>
+        <!--Crear sección para seleccionar mokepon-->
 
-    <!--Crear sección para seleccionar mokepon-->
+        <section id="seleccionar-mascota">
+            <h2>Elige a tu mascota: </h2>
 
-    <section id="seleccionar-mascota">
-        <h2>Elige a tu mascota: </h2>
+            <form class="mascota-formulario">
 
-        <label for="hipodoge">Hipodoge 💧</label>
-        <input type="radio" name="mascota" value="hipodoge" id="hipodoge">
-
-        <label for="capipepo">Capipepo 🌱</label>
-        <input type="radio" name="mascota" value="capipepo" id="capipepo">
-
-        <label for="ratigueya">Ratigueya 🔥</label>
-        <input type="radio" name="mascota" value="ratigueya" id="ratigueya">
-
-        <label for="langostelvis">Langostelvis 💧 🔥</label>
-        <input type="radio" name="mascota" value="langostelvis" id="langostelvis">
-
-        <label for="tucapalma">Tucapalma 💧 🌱</label>
-        <input type="radio" name="mascota" value="tucapalma" id="tucapalma">
-
-        <label for="pydos">Pydos 🌱 🔥</label>
-        <input type="radio" name="mascota" value="pydos" id="pydos">
-
-        <button id="boton-mascota">Seleccionar</button>
-
-    </section>
-
-    <!--Crear sección para seleccionar ataque-->
+                <div>
+                    <div>
+                        <label for="hipodoge">Hipodoge 💧</label>
+                        <input type="radio" name="mascota" value="hipodoge" id="hipodoge">
+                    </div>
     
-    <section id="seleccionar-ataque">
-        <h2>Elige a tu ataque: </h2>
+                    <div>
+                        <label for="capipepo">Capipepo 🌱</label>
+                        <input type="radio" name="mascota" value="capipepo" id="capipepo">
+                    </div>
+        
+                    <div>
+                        <label for="ratigueya">Ratigueya 🔥</label>
+                        <input type="radio" name="mascota" value="ratigueya" id="ratigueya">
+                    </div>
+    
+                    <div>
+                        <label for="langostelvis">Langostelvis 💧 🔥</label>
+                        <input type="radio" name="mascota" value="langostelvis" id="langostelvis">
+                    </div>
+    
+                    <div>
+                        <label for="tucapalma">Tucapalma 💧 🌱</label>
+                        <input type="radio" name="mascota" value="tucapalma" id="tucapalma">  
+                    </div>
+    
+                    <div>
+                        <label for="pydos">Pydos 🌱 🔥</label>
+                        <input type="radio" name="mascota" value="pydos" id="pydos">
+                    </div>
+                </div>
+    
+                <button id="boton-mascota" class="btn-style1">Seleccionar</button>
+            </form>
 
-        <p>Seleccionaste a la mascota:  
-            <span id="mascota-jugador"> </span> ||
-            Vidas: <span id="vidas-jugador"></span>  
-        </p>
+        </section>
 
-        <p> Mascota seleccionada por el enemigo: 
-            <span id="mascota-enemigo"> </span> 
-            || Vidas: <span id="vidas-enemigo"></span>
-        </p>
+        <!--Crear sección para seleccionar ataque-->
+    
+        <section id="seleccionar-ataque">
+            <h2>Elige a tu ataque: </h2>
 
-        <p>
-            <button id="boton-fuego" class="btn-ataque">Fuego 🔥</button>
-            <button id="boton-agua" class="btn-ataque">Agua 💧</button>
-            <button id="boton-tierra" class="btn-ataque">Tierra 🌱</button>
-        </p>
+            <p>Seleccionaste a la mascota:  
+                <span id="mascota-jugador"> </span> ||
+                Vidas: <span id="vidas-jugador"></span>  
+            </p>
 
-    </section>
+            <p> Mascota seleccionada por el enemigo: 
+                <span id="mascota-enemigo"> </span> 
+                || Vidas: <span id="vidas-enemigo"></span>
+            </p>
 
-    <!--Crear sección para mostrar mensajes-->
-    <section id="mensajes">
+            <p>
+                <button id="boton-fuego" class="btn-ataque">Fuego 🔥</button>
+                <button id="boton-agua" class="btn-ataque">Agua 💧</button>
+                <button id="boton-tierra" class="btn-ataque">Tierra 🌱</button>
+            </p>
 
-        <!--
+        </section>
 
-        <p>Tu mascota atacó con FUEGO, la mascota del enemigo atacó con TIERRA, ¡Ganaste 🥳!</p>
+        <!--Crear sección para mostrar mensajes-->
+        <section id="mensajes">
 
-        -->
+            <!--
 
-    </section>
+            <p>Tu mascota atacó con FUEGO, la mascota del enemigo atacó con TIERRA, ¡Ganaste 🥳!</p>
+
+            -->
+
+        </section>
 
 
-    <!--Crear sección para reiniciar juego-->
-    <section id="reiniciar">
+        <!--Crear sección para reiniciar juego-->
+        <section id="reiniciar">
 
-        <button id="boton-reiniciar">Reiniciar</button>  
+            <button id="boton-reiniciar">Reiniciar</button>  
 
-    </section>
-
+        </section>
+    </main>
     
 </body>
 </html>
