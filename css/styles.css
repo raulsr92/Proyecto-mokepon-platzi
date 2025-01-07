@@ -62,11 +62,13 @@ h2{
     align-self: center;
 }
 
+/*
 .mascota-formulario > div{
     display: flex;
     flex-direction: column;
     row-gap: 15px;
 }
+*/
 
 /* Convertir en contenedores flexbox a las secciones */
 
@@ -119,4 +121,17 @@ h2{
 
 .btn-style1:hover{
     background-color: #7E99A3;
+}
+
+/* Componente: Cardas*/
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 40px;
+}
+
+.card-mokepon img{
+    width: 100%;
 }
