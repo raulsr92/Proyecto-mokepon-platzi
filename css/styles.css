@@ -133,5 +133,38 @@ h2{
 }
 
 .card-mokepon img{
-    width: 100%;
+    width: 70%;
+    cursor: pointer;
+}
+
+.card-mokepon{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.card-mokepon div:nth-child(2){
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.card-mokepon div:nth-child(2) p:nth-child(1){
+    padding-bottom: 15px;
+}
+
+.card-mokepon div:nth-child(2) div{
+    display: flex;
+    column-gap: 10px;
+}
+
+.card-mokepon div:nth-child(1){
+    display: flex;
+    background-color: #f2f2f2;
+}
+
+.card-mokepon div:nth-child(1) label{
+    display: flex;
+    justify-content: center;
 }
