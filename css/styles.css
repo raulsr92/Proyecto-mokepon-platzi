@@ -5,13 +5,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     padding: 0;
     margin: 0;
-    font-family: "Comic Neue", serif;
+    font-family: "Roboto", serif;
     font-weight: 300;
     box-sizing: border-box;
 }
@@ -123,7 +122,7 @@ h2{
     background-color: #7E99A3;
 }
 
-/* Componente: Cardas*/
+/* Componente: Cards*/
 
 .cards-container{
     display: grid;
@@ -176,4 +175,18 @@ h2{
 
 input[type=radio]{
     display: none;
+}
+
+/* Jerarquía de textos */
+
+.text-mokepon-name{
+    font-size: 22px;
+    font-weight: 700;
+    color: #4C585B;
+}
+
+.text-mokepon-number{
+    font-size: 14px;
+    font-weight: 600;
+    color: #7E99A3;
 }
