@@ -128,7 +128,7 @@ h2{
 .cards-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
+    column-gap: 15px;
     row-gap: 40px;
 }
 
@@ -141,6 +141,8 @@ h2{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    box-shadow: 1px 2px 5px 0px #7E99A3;
+    border-radius: 10px;
 }
 
 .card-mokepon div:nth-child(2){
@@ -162,9 +164,16 @@ h2{
 .card-mokepon div:nth-child(1){
     display: flex;
     background-color: #f2f2f2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
 }
 
 .card-mokepon div:nth-child(1) label{
     display: flex;
     justify-content: center;
+}
+
+input[type=radio]{
+    display: none;
 }
