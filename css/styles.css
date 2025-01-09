@@ -108,9 +108,9 @@ h2{
 
 .btn-style1{
     color: white;
-    background-color: #A5BFCC;
+    background-color: #7E99A3;
     border: 0;
-    padding: 10px 25px;
+    padding: 12px 40px;
     border-radius: 5px;
     cursor: pointer;
     transition-property: all;
@@ -119,7 +119,7 @@ h2{
 }
 
 .btn-style1:hover{
-    background-color: #7E99A3;
+    background-color: #4C585B;
 }
 
 /* Componente: Cards*/
@@ -149,11 +149,10 @@ h2{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    padding-bottom: 15px
 }
 
-.card-mokepon div:nth-child(2) p:nth-child(1){
-    padding-bottom: 15px;
-}
+
 
 .card-mokepon div:nth-child(2) div{
     display: flex;
@@ -189,4 +188,38 @@ input[type=radio]{
     font-size: 14px;
     font-weight: 600;
     color: #7E99A3;
+}
+
+.text-button{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*Componente: Badge*/
+
+.water-attack-badge{
+    background-color: #4592c4;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 18px;
+    border-radius: 5px;
+}
+
+.tierra-attack-badge{
+    background-color: #9BCC50;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 18px;
+    border-radius: 5px;
+}
+
+.fire-attack-badge{
+    background-color: #FD7D24;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 18px;
+    border-radius: 5px;
 }
