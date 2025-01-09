@@ -39,16 +39,34 @@ main{
 }
 
 h1{
-    color: #2E6BAF;
     font-family: "Titan One", serif;
     font-weight: 400;
     font-style: normal;
     align-self: center;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    font-size: 40px;
+    color: #4C585B;
+}
+
+h1 img{
+    width: 45px;
 }
 
 h2{
     font-family: "Nunito Sans", serif;
     margin: 0;
+    color: #7E99A3;
+    font-weight: 500;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+h2 img{
+    width: 45px;
 }
 
 .mascota-formulario{
