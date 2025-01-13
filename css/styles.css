@@ -160,6 +160,13 @@ h2 img{
     row-gap: 10px;
     box-shadow: 1px 2px 5px 0px #7E99A3;
     border-radius: 10px;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
+.card-mokepon:hover{
+    transform: translateY(-10px);
 }
 
 .card-mokepon div:nth-child(2){
@@ -169,8 +176,6 @@ h2 img{
     row-gap: 10px;
     padding-bottom: 15px
 }
-
-
 
 .card-mokepon div:nth-child(2) div{
     display: flex;
@@ -193,6 +198,7 @@ h2 img{
 input[type=radio]{
     display: none;
 }
+
 
 /* Jerarquía de textos */
 
