@@ -62,7 +62,11 @@ function iniciarJuego() {
         cardsArray[i].style.outline = 'rgb(255, 255, 255) solid 0px'
 
         cardsArray[i].addEventListener("click", ()=>{
+
+            console.log("antes del evento click")
+
             identificarCard(i);
+
         } )
 
     }
@@ -74,18 +78,23 @@ function identificarCard(indice) {
     
     let cardsArray = document.getElementsByClassName("card-mokepon");
 
-    if(cardsArray[indice].style.boxShadow =='rgb(126, 153, 163) 1px 2px 5px 0px'){
+    if(cardsArray[indice].style.boxShadow =='rgb(126, 153, 163) 1px 2px 5px 0px')
+        {
+            console.log("El flujo entró al IF")
 
         for (let i = 0; i < cardsArray.length; i++) {
 
             cardsArray[i].style.outline = 'rgb(255, 255, 255) solid 0px'
-            cardsArray[i].style.boxShadow = 'rgb(126, 153, 163) 1px 2px 5px 0px'            
+            cardsArray[i].style.boxShadow = 'rgb(126, 153, 163) 1px 2px 5px 0px'    
         }
         
         cardsArray[indice].style.outline = 'rgb(227, 53, 13) solid 3px'
         cardsArray[indice].style.boxShadow = 'rgb(227, 53, 13) 1px 2px 15px 0px'
-    }
-    else if(cardsArray[indice].style.boxShadow == 'rgb(227, 53, 13) 1px 2px 15px 0px'){
+
+    } else if(cardsArray[indice].style.boxShadow == 'rgb(227, 53, 13) 1px 2px 15px 0px'){
+
+        console.log("El flujo entró al ELSE IF")
+
         cardsArray[indice].style.outline = 'rgb(255, 255, 255) solid 0px'
         cardsArray[indice].style.boxShadow = 'rgb(126, 153, 163) 1px 2px 5px 0px'
     }
@@ -93,7 +102,48 @@ function identificarCard(indice) {
 }
 
 function seleccionarMascotaJugador(){
+
+    // Clase 20: capturar elemento <span></span>
+        let showMascotaJugador = document.getElementById("mascota-jugador");
+        console.log(showMascotaJugador);
+
+    let cardsArray = document.getElementsByClassName("card-mokepon");
+
+    for (let i = 0; i < cardsArray.length; i++) {
+
+        switch (true) {
+            case cardsArray[i].style.boxShadow == 'rgb(227, 53, 13) 1px 2px 15px 0px':
+            
+                if(i==0){
+                    mascotaSeleccionada=1
+                    showMascotaJugador.innerHTML = "Hipodoge"
+                } else if(i==1){
+                    mascotaSeleccionada=2
+                    showMascotaJugador.innerHTML = "Capipepo"
+                }else if(i==2){
+                    mascotaSeleccionada=3
+                    showMascotaJugador.innerHTML = "Ratigueya"
+                }else if(i==3){
+                    mascotaSeleccionada=4
+                    showMascotaJugador.innerHTML = "Langostelvis"
+                }else if(i==4){
+                    mascotaSeleccionada=5
+                    showMascotaJugador.innerHTML = "Tucapalma"
+                }else if(i==5){
+                    mascotaSeleccionada=6
+                    showMascotaJugador.innerHTML = "Pydos"
+                }
+
+                hideANDShowHtmlElement("seleccionar-ataque");
+                hideANDShowHtmlElement("seleccionar-mascota")
+            break;
+        }
+    }
+
+
     
+
+    /*
         // Capturar mascotas en variables
         let moke1 = document.getElementById("hipodoge");
         let moke2 = document.getElementById("capipepo");
@@ -101,16 +151,14 @@ function seleccionarMascotaJugador(){
         let moke4 = document.getElementById("langostelvis");
         let moke5 = document.getElementById("tucapalma");
         let moke6 = document.getElementById("pydos");
-
-        // Clase 20: capturar elemento <span></span>
-        let showMascotaJugador = document.getElementById("mascota-jugador");
-        console.log(showMascotaJugador);
+        */
 
         // Clase 26: capturar elementos span donde se muestran las vidas del jugador y el enemigo
 
         let showVidasJugador = document.getElementById("vidas-jugador");
         let showVidasEnemigo = document.getElementById("vidas-enemigo");
 
+        /*
         // Mostrar la mascota seleccionada
         switch (true) {
             case moke1.checked:
@@ -206,14 +254,12 @@ function seleccionarMascotaJugador(){
                 alert(`No has seleccionado ninguna mascota`)
                 break;
         } 
-        
+        */
         seleccionarMascotaEnemigo();
 
         // Clase 26: mostrar vidas en span
-
         showVidasJugador.innerHTML = vidasJugador
         showVidasEnemigo.innerHTML = vidasEnemigo
-
 }
 
 // Clase 22: Crear funcion para obtener un numero aleatorio entre un rango
@@ -245,23 +291,23 @@ function seleccionarMascotaEnemigo(){
 
     switch (aleatorioEnemigo) {
         case 1:
-            showMascotaEnemigo.innerHTML = moke1.value
+            showMascotaEnemigo.innerHTML = "Hipodoge"
             break;
 
         case 2:
-            showMascotaEnemigo.innerHTML = moke2.value
+            showMascotaEnemigo.innerHTML = "Capipepo"
             break;    
         case 3:
-            showMascotaEnemigo.innerHTML = moke3.value
+            showMascotaEnemigo.innerHTML = "Ratigueya"
             break;  
         case 4:
-            showMascotaEnemigo.innerHTML = moke4.value
+            showMascotaEnemigo.innerHTML = "Langostelvis"
             break;  
         case 5:
-            showMascotaEnemigo.innerHTML = moke5.value
+            showMascotaEnemigo.innerHTML = "Tucapalma"
             break;                
         default:
-            showMascotaEnemigo.innerHTML = moke6.value
+            showMascotaEnemigo.innerHTML = "Pydos"
             break;
     } 
 
