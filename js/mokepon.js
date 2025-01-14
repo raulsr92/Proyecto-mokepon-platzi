@@ -75,6 +75,13 @@ function identificarCard(indice) {
     let cardsArray = document.getElementsByClassName("card-mokepon");
 
     if(cardsArray[indice].style.boxShadow =='rgb(126, 153, 163) 1px 2px 5px 0px'){
+
+        for (let i = 0; i < cardsArray.length; i++) {
+
+            cardsArray[i].style.outline = 'rgb(255, 255, 255) solid 0px'
+            cardsArray[i].style.boxShadow = 'rgb(126, 153, 163) 1px 2px 5px 0px'            
+        }
+        
         cardsArray[indice].style.outline = 'rgb(227, 53, 13) solid 3px'
         cardsArray[indice].style.boxShadow = 'rgb(227, 53, 13) 1px 2px 15px 0px'
     }
