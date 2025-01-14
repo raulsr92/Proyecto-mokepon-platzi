@@ -49,8 +49,41 @@ function iniciarJuego() {
     elementFormMascotas.addEventListener("submit",function(event){
         event.preventDefault();
     })
+
+    // Clase 38: Capturar las tarjetas en un array
+
+    let cardsArray = document.getElementsByClassName("card-mokepon");
+
+    console.log(cardsArray);
+
+    for (let i = 0; i < cardsArray.length; i++) {
+
+        cardsArray[i].style.boxShadow = 'rgb(126, 153, 163)1px 2px 5px 0px'
+        cardsArray[i].style.outline = 'rgb(255, 255, 255) solid 0px'
+
+        cardsArray[i].addEventListener("click", ()=>{
+            identificarCard(i);
+        } )
+
+    }
 }
 
+function identificarCard(indice) {
+
+    console.log(`La card seleccionada es la de la posición ${indice}`)
+    
+    let cardsArray = document.getElementsByClassName("card-mokepon");
+
+    if(cardsArray[indice].style.boxShadow =='rgb(126, 153, 163) 1px 2px 5px 0px'){
+        cardsArray[indice].style.outline = 'rgb(227, 53, 13) solid 3px'
+        cardsArray[indice].style.boxShadow = 'rgb(227, 53, 13) 1px 2px 15px 0px'
+    }
+    else if(cardsArray[indice].style.boxShadow == 'rgb(227, 53, 13) 1px 2px 15px 0px'){
+        cardsArray[indice].style.outline = 'rgb(255, 255, 255) solid 0px'
+        cardsArray[indice].style.boxShadow = 'rgb(126, 153, 163) 1px 2px 5px 0px'
+    }
+
+}
 
 function seleccionarMascotaJugador(){
     
