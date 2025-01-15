@@ -109,6 +109,8 @@ function seleccionarMascotaJugador(){
 
     let cardsArray = document.getElementsByClassName("card-mokepon");
 
+    let seleccion = false;
+
     for (let i = 0; i < cardsArray.length; i++) {
 
         switch (true) {
@@ -134,10 +136,16 @@ function seleccionarMascotaJugador(){
                     showMascotaJugador.innerHTML = "Pydos"
                 }
 
+                seleccion = true;
+
                 hideANDShowHtmlElement("seleccionar-ataque");
                 hideANDShowHtmlElement("seleccionar-mascota")
             break;
         }
+    }
+
+    if(seleccion==false){
+        alert(`No has seleccionado ninguna mascota`)
     }
 
 
