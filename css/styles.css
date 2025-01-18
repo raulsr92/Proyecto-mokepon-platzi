@@ -112,6 +112,15 @@ h2 img{
     align-items: center;
 }
 
+#seleccionar-ataque > div:nth-child(2){
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    column-gap: 80px;
+}
+
+
 #mensajes{
     width: 90%;
     background-color: white;
