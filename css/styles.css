@@ -115,6 +115,8 @@ h3{
     padding: 12px 15px 25px 15px;
     row-gap: 15px;
     align-items: center;
+
+    position: relative;
 }
 
 #seleccionar-ataque > div:nth-child(2){
@@ -122,7 +124,7 @@ h3{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 10px 80px;
-    column-gap: 80px;
+    column-gap: 200px;
 }
 
 
@@ -345,5 +347,17 @@ input[type=radio]{
     padding: 3px 18px;
     border-radius: 5px;
 }
+
+/* Posicionamiento de botones de ataque */
+
+#seleccionar-ataque > div:nth-child(3){
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    top: calc(50% - 95.6px);
+    left: calc(50% - 82.98px);
+}
+
 
 
