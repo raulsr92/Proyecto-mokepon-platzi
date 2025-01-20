@@ -116,7 +116,7 @@ h2 img{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
+    padding: 20px 80px;
     column-gap: 80px;
 }
 
@@ -153,7 +153,7 @@ h2 img{
     background-color: #4C585B;
 }
 
-/* Componente: Cards*/
+/* Componente: Cards pantalla 1*/
 
 .cards-container{
     display: grid;
@@ -212,6 +212,53 @@ input[type=radio]{
     display: none;
 }
 
+/* Componente: Cards pantalla 2*/
+
+
+.card-mokepon-juego{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    background-color: #595959;
+    padding: 30px 0px 40px 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.card-mokepon-juego img{
+    width: 80%;
+}
+
+
+.card-mokepon-juego > div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-mokepon-juego > div:nth-child(2) > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.card-mokepon-juego > div:nth-child(2) > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 215px;
+    height: 215px;
+    background-color: #4b7f94;
+    border-radius: 50%;
+}
+
 
 /* Jerarquía de textos */
 
@@ -231,6 +278,8 @@ input[type=radio]{
     font-size: 20px;
     font-weight: 700;
 }
+
+
 
 /*Componente: Badge*/
 
@@ -260,3 +309,5 @@ input[type=radio]{
     padding: 3px 18px;
     border-radius: 5px;
 }
+
+
