@@ -317,6 +317,18 @@ input[type=radio]{
     color: #7E99A3;
 }
 
+.text-batalla{
+    font-size: 18px;
+    color: #4b7f94;
+    font-weight: 600;
+}
+
+.text-batalla-final{
+    font-size: 18px;
+    color: #E3350D;
+    font-weight: 600;
+}
+
 
 
 /*Componente: Badge*/
@@ -392,11 +404,8 @@ input[type=radio]{
 
 #mostrar-mensajes img{
     width: 50px;
+    position: absolute;
     top: -25px;
     left: calc(50% - 25px);
 }
 
-#mostrar-mensajes img{
-    width: 50px;
-    position: absolute;
-}

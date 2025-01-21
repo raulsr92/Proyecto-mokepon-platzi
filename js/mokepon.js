@@ -42,6 +42,12 @@ function iniciarJuego() {
 
            hideANDShowHtmlElement("seleccionar-ataque")
 
+        // Seccion de Mensajes
+
+        hideANDShowHtmlElement("mostrar-mensajes")
+
+
+
     // Clase 33: 
 
     elementFormMascotas = document.querySelector(".mascota-formulario");
@@ -424,6 +430,11 @@ function ataqueAleatorioEnemigo() {
 
             obtenerResultado();
             //showAtaqueEnemigo.innerHTML = ataqueEnemigo
+
+            //Mostrar seccion de mensajes //
+
+            hideANDShowHtmlElement("mostrar-mensajes");
+
             crearMensaje();
     } else{
         alertaVidasEnemigo()
@@ -439,6 +450,8 @@ function crearMensaje() {
     let parrafo = document.createElement("div");
 
     parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, Resultado: ${resultado}`;
+
+    parrafo.setAttribute("class", "text-batalla")
 
     console.log(parrafo);
 
@@ -486,6 +499,9 @@ function crearMensajeFinal(resultadoFinal) {
        let parrafo = document.createElement("div");
 
        parrafo.innerHTML = resultadoFinal;
+
+       parrafo.setAttribute("class", "text-batalla-final")
+
       
        // 2° Ubicar párrafo (al final de los párrafos agregados en cada partida)
    
