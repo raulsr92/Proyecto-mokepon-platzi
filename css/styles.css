@@ -359,5 +359,44 @@ input[type=radio]{
     left: calc(50% - 82.98px);
 }
 
+/*Cajita de mensajes*/
 
+#mostrar-mensajes{
+    width: 100%;
+    background-color: black;
+    padding: 15px;
+}
 
+#mostrar-mensajes > div{
+    background-color: #2A2F2B;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+#mostrar-mensajes > div > div{
+    width: 100%;
+    background-color: #4963B1;
+    padding: 10px 50px 10px 20px;
+    border-radius: 25px;
+}
+
+#mostrar-mensajes > div > div > div{
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 10px;
+    outline: 3px solid black;
+    position: relative;
+
+}
+
+#mostrar-mensajes img{
+    width: 50px;
+    top: -25px;
+    left: calc(50% - 25px);
+}
+
+#mostrar-mensajes img{
+    width: 50px;
+    position: absolute;
+}
