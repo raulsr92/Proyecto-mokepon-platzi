@@ -140,6 +140,9 @@ h3{
    /* width: 90%;
     background-color: white;*/
     display: flex;
+    position: fixed;
+    right: 10%;
+    top: 20%;
 }
 
 /* Componente: Botones*/
@@ -427,6 +430,7 @@ input[type=radio]{
     color: white;
     background-color: #e3350d;
     border: 4px solid black;
+    border-right: 0;
     padding: 35px 15px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
