@@ -414,12 +414,14 @@ input[type=radio]{
 
 /*Botón Flotante Reiniciar*/
 
-
+/*Capítulo 8: Esta propiedades pasaron a la línea 456, porque hemos creado una clase a reutilizar en botones flotantes*/
+/*
 #boton-reiniciar{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+*/
 
 .icon-fijo{
     font-size: 50px;
@@ -443,4 +445,35 @@ input[type=radio]{
 
 .btn-style2:hover{
     background-color: #A6270A;
+}
+
+/*Botón Flotante Seleccionar*/
+
+#boton-mascota img{
+    width: 45px;
+}
+
+.boton-flotante{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.btn-style3{
+    color: white;
+    background-color: #4DAD5B;
+    border: 4px solid black;
+    border-right: 0;
+    padding: 35px 10px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.btn-style3:hover{
+    background-color: #3E8C4A;
 }
