@@ -381,13 +381,14 @@ input[type=radio]{
 /*Cajita de mensajes*/
 
 #mostrar-mensajes{
-    /*width: 100%;*/ /*Nota aclaratoria: se cambión por un width de 22% en el capítulo 10*/
-    background-color: black;
+    /*width: 100%;*/ /*Nota aclaratoria: se cambió por un width de 21% en el capítulo 10*/
+    
+    /*background-color: black;*/ /*Nota aclaratoria: Se quitó en el capítulo 10*/
     padding: 15px;
     position: absolute;
-    width: 22%;
+    width: 21%;
     left: 0%;
-    top: 0;
+    top: 25%;
 }
 
 #mostrar-mensajes > div{
@@ -395,6 +396,7 @@ input[type=radio]{
     padding: 10px;
     border-radius: 20px;
     width: 100%;
+    box-shadow: 0px 0px 10px 3px #E3350D;
 }
 
 #mostrar-mensajes > div > div{
