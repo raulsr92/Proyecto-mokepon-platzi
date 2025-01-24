@@ -447,19 +447,33 @@ function crearMensaje() {
 
    // 1° Crear párrafo y almacenarlo en una variable
 
-    let parrafo = document.createElement("div");
+   let contendorParrafo = document.getElementById("mensajes");
 
-    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, Resultado: ${resultado}`;
+   if (contendorParrafo.children.length == 1) {
 
-    parrafo.setAttribute("class", "text-batalla")
+        let parrafo = document.createElement("div");
 
-    console.log(parrafo);
+        parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, Resultado: ${resultado}`;
 
-    // 2° Ubicar párrafo
+        parrafo.setAttribute("class", "text-batalla")
 
-    let contendorParrafo = document.getElementById("mensajes");
+        console.log(parrafo);
 
-    contendorParrafo.append(parrafo);
+        // 2° Ubicar párrafo
+
+        contendorParrafo.append(parrafo);
+    
+   } else if (contendorParrafo.children.length > 1){
+    
+        let parrafoNuevo = document.createElement("div");
+
+        parrafoNuevo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, Resultado: ${resultado}`;
+
+        parrafoNuevo.setAttribute("class", "text-batalla")
+
+        contendorParrafo.children[1].replaceWith(parrafoNuevo)
+
+   }
 
     // Clase 26: volvemos a imprimir las vidas para que se actualice en el DOM
 
