@@ -58,27 +58,6 @@ function iniciarJuego() {
         event.preventDefault();
     })
 
-    // Clase 38: Capturar las tarjetas en un array
-
-    let cardsArray = document.getElementsByClassName("card-mokepon");
-
-    console.log(cardsArray);
-
-    for (let i = 0; i < cardsArray.length; i++) {
-
-        cardsArray[i].style.boxShadow = 'rgb(126, 153, 163)1px 2px 5px 0px'
-        cardsArray[i].style.outline = 'rgb(255, 255, 255) solid 0px'
-
-        cardsArray[i].addEventListener("click", ()=>{
-
-            console.log("antes del evento click")
-
-            identificarCard(i);
-
-        } )
-
-    }
-
     // Dibujar cards desde JS
 
         //Agregar objetos mokepones al array
@@ -98,7 +77,8 @@ function iniciarJuego() {
             "Hipodoge",
             "./images/001.png",
             "0001",
-            ["Agua"],
+            ["Agua", "Fuego", "Tierra"],
+            ["block", "none", "none"],
             mokepones
         )
 
@@ -106,7 +86,8 @@ function iniciarJuego() {
             "Capipepo",
             "./images/002.png",
             "0002",
-            ["Tierra"],
+            ["Agua", "Fuego", "Tierra"],
+            ["none", "none", "block"],
             mokepones
         )
 
@@ -114,7 +95,8 @@ function iniciarJuego() {
             "Ratigueya",
             "./images/003.png",
             "0003",
-            ["Fuego"],
+            ["Agua", "Fuego", "Tierra"],
+            ["none", "block", "none"],
             mokepones
         )
 
@@ -122,7 +104,8 @@ function iniciarJuego() {
             "Langostelvis",
             "./images/004.png",
             "0004",
-            ["Agua", "Fuego"],
+            ["Agua", "Fuego", "Tierra"],
+            ["block", "block", "none"],
             mokepones
         )
 
@@ -130,7 +113,8 @@ function iniciarJuego() {
             "Tucapalma",
             "./images/005.png",
             "0005",
-            ["Agua", "Tierra"],
+            ["Agua", "Fuego", "Tierra"],
+            ["block", "none", "block"],
             mokepones
         )
 
@@ -138,20 +122,72 @@ function iniciarJuego() {
             "Pydos",
             "./images/006.png",
             "0001",
-            ["Tierra", "Fuego"],
+            ["Agua", "Fuego", "Tierra"],
+            ["none", "block", "block"],
             mokepones
         )
-  
+
+
+        let cardsContainer = document.querySelector(".cards-container");
+
+        mokepones.forEach( (mokepon) =>{
+
+            cardsContainer.innerHTML += 
+            `
+                <div class="card-mokepon">
+                        <div>
+                            <div >
+                                <img src=${mokepon.imagen} alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-mokepon-number">#${mokepon.id}</p>
+                            <p class="text-mokepon-name">${mokepon.nombre}</p>
+                            <div>
+                                <p style="display: ${mokepon.mostrar[0]};" class="water-attack-badge">${mokepon.ataques[0]}</p>
+                                <p style="display: ${mokepon.mostrar[1]};" class="fire-attack-badge">${mokepon.ataques[1]}</p>
+                                <p style="display: ${mokepon.mostrar[2]};" class="tierra-attack-badge">${mokepon.ataques[2]}</p>
+                            </div>
+                        </div>
+
+                </div>
+                
+            `
+        }
+        )
+
+
+// Clase 38: Capturar las tarjetas en un array
+
+    let cardsArray = document.getElementsByClassName("card-mokepon");
+
+    console.log(cardsArray);
+
+    for (let i = 0; i < cardsArray.length; i++) {
+
+        cardsArray[i].style.boxShadow = 'rgb(126, 153, 163)1px 2px 5px 0px'
+        cardsArray[i].style.outline = 'rgb(255, 255, 255) solid 0px'
+
+        cardsArray[i].addEventListener("click", ()=>{
+
+            console.log("antes del evento click")
+
+            identificarCard(i);
+
+        } )
+
+    }
 }
 
-function agregarMokepon(name, image, ID, types, array) {
+function agregarMokepon(name, image, ID, types,display, array) {
 
     array.push(
         {
             nombre: name,
             imagen: image,
             id: ID,
-            ataques: types
+            ataques: types,
+            mostrar: display
         }
     )
 
