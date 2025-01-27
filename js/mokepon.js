@@ -6,6 +6,8 @@ let mascotaSeleccionada;
 let vidasJugador =0;
 let vidasEnemigo =0;
 
+let mokepones = [];
+
 function iniciarJuego() {
 
     // Clase 26 - Creando sistema de vidas
@@ -76,6 +78,83 @@ function iniciarJuego() {
         } )
 
     }
+
+    // Dibujar cards desde JS
+
+        //Agregar objetos mokepones al array
+
+        /*
+        mokepones.push(
+            {
+                nombre: "Hipodoge",
+                imagen: "./images/001.png",
+                id: "0001",
+                ataques: ["Agua"]
+            }
+        )
+        */
+
+        agregarMokepon(
+            "Hipodoge",
+            "./images/001.png",
+            "0001",
+            ["Agua"],
+            mokepones
+        )
+
+        agregarMokepon(
+            "Capipepo",
+            "./images/002.png",
+            "0002",
+            ["Tierra"],
+            mokepones
+        )
+
+        agregarMokepon(
+            "Ratigueya",
+            "./images/003.png",
+            "0003",
+            ["Fuego"],
+            mokepones
+        )
+
+        agregarMokepon(
+            "Langostelvis",
+            "./images/004.png",
+            "0004",
+            ["Agua", "Fuego"],
+            mokepones
+        )
+
+        agregarMokepon(
+            "Tucapalma",
+            "./images/005.png",
+            "0005",
+            ["Agua", "Tierra"],
+            mokepones
+        )
+
+        agregarMokepon(
+            "Pydos",
+            "./images/006.png",
+            "0001",
+            ["Tierra", "Fuego"],
+            mokepones
+        )
+  
+}
+
+function agregarMokepon(name, image, ID, types, array) {
+
+    array.push(
+        {
+            nombre: name,
+            imagen: image,
+            id: ID,
+            ataques: types
+        }
+    )
+
 }
 
 function identificarCard(indice) {
