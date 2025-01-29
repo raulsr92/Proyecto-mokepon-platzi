@@ -3,7 +3,7 @@
 El videojuego ha sido elaborado durante las sesiones del curso "Programación Básica" de [Platzi](https://platzi.com) con  HTML🧡, CSS 💙y JavaScript💛 y adicionalmente se han añadido estilos CSS y código JS de mi propia autoría.
 
 ✅ Vista principal:
-![Vista principal](./images/VistaIndex.png)
+![Vista principal](./images/Pantalla1.png)
 
 🎬 Se han elaborado los siguientes video tutoriales
 
