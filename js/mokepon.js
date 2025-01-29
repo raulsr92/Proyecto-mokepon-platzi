@@ -566,27 +566,51 @@ function crearMensaje() {
 
    if (contendorParrafo.children.length == 1) {
 
-        let parrafo = document.createElement("div");
+        let parrafo1 = document.createElement("p");
+        let parrafo2 = document.createElement("p");
+        let parrafo3 = document.createElement("p");
 
-        parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, Resultado: ${resultado}`;
+        parrafo1.innerHTML = 
+        `Atacaste con ${ataqueJugador}`
 
-        parrafo.setAttribute("class", "text-batalla")
+        parrafo2.innerHTML = 
+        `El oponente atacó con ${ataqueEnemigo}`
 
-        console.log(parrafo);
+        parrafo3.innerHTML = 
+        `¡${resultado}!`
+        
+
+        parrafo1.setAttribute("class", "text-batalla-jugador")
+        parrafo2.setAttribute("class", "text-batalla-enemigo")
+        parrafo3.setAttribute("class", "text-batalla-veredicto")
+
 
         // 2° Ubicar párrafo
 
-        contendorParrafo.append(parrafo);
+        contendorParrafo.append(parrafo1,parrafo2,parrafo3);
     
    } else if (contendorParrafo.children.length > 1){
     
-        let parrafoNuevo = document.createElement("div");
+        let parrafoNuevo1 = document.createElement("p");
+        let parrafoNuevo2 = document.createElement("p");
+        let parrafoNuevo3 = document.createElement("p");
 
-        parrafoNuevo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo}, Resultado: ${resultado}`;
+        parrafoNuevo1.innerHTML = 
+        `Atacaste con ${ataqueJugador}`
 
-        parrafoNuevo.setAttribute("class", "text-batalla")
+        parrafoNuevo2.innerHTML = 
+        `El oponente atacó con ${ataqueEnemigo}`
 
-        contendorParrafo.children[1].replaceWith(parrafoNuevo)
+        parrafoNuevo3.innerHTML = 
+        `¡${resultado}!`
+
+        parrafoNuevo1.setAttribute("class", "text-batalla-jugador")
+        parrafoNuevo2.setAttribute("class", "text-batalla-enemigo")
+        parrafoNuevo3.setAttribute("class", "text-batalla-veredicto")
+
+        contendorParrafo.children[1].replaceWith(parrafoNuevo1)
+        contendorParrafo.children[2].replaceWith(parrafoNuevo2)
+        contendorParrafo.children[3].replaceWith(parrafoNuevo3)
 
    }
 
@@ -601,7 +625,7 @@ function crearMensaje() {
     // Preguntar si el jugador o enemigo tienen vidas (esto puede ir dentro de la función)
 
     if(vidasJugador==0){
-        crearMensajeFinal("Perdiste!, te quedaste sin vidas.")
+        crearMensajeFinal("Perdiste la batalla, te quedaste sin vidas.")
         alert("Usted ha PERDIDO la partida")
         bloquearBotonAtaque()
 
@@ -611,7 +635,7 @@ function crearMensaje() {
         
 
     } else if(vidasEnemigo==0){
-        crearMensajeFinal("Ganaste!, tu competidor se quedó sin vidas.")
+        crearMensajeFinal("Ganaste la batalla, tu competidor se quedó sin vidas.")
         alert("Usted ha GANADO la partida")
         bloquearBotonAtaque()
 
@@ -625,18 +649,20 @@ function crearMensajeFinal(resultadoFinal) {
 
        // 1° Crear párrafo y almacenarlo en una variable
 
-       let parrafo = document.createElement("div");
+       let parrafoFinal = document.createElement("p");
 
-       parrafo.innerHTML = resultadoFinal;
+       parrafoFinal.innerHTML = resultadoFinal;
 
-       parrafo.setAttribute("class", "text-batalla-final")
+       parrafoFinal.setAttribute("class", "text-batalla-final")
 
       
        // 2° Ubicar párrafo (al final de los párrafos agregados en cada partida)
    
        let contendorParrafo = document.getElementById("mensajes");
    
-       contendorParrafo.append(parrafo);
+       contendorParrafo.append(parrafoFinal);
+
+
     
 }
 
@@ -662,22 +688,22 @@ function bloquearBotonAtaque() {
 function obtenerResultado(){
 
         if (ataqueJugador==ataqueEnemigo) {
-            resultado = "Empate"
+            resultado = "Empate, es un combate reñido"
         } 
         else if(ataqueJugador=="Agua"){
 
-            resultado = "Ganaste"  
+            resultado = "Ganaste, el enemigo pierde una vida"  
             // Porque el agua vence a ambos y si pasó el primer condicional, no son iguales, osea el enemigo es tierra o fuego
 
             vidasEnemigo -= 1;
         } 
         else if(ataqueJugador == "Tierra" && ataqueEnemigo=="Fuego"){
 
-            resultado = "Ganaste" // Porque tierra vence a fuego
+            resultado = "Ganaste, el enemigo pierde una vida" // Porque tierra vence a fuego
             vidasEnemigo -= 1;
         }
         else{
-            resultado= "Perdiste"  // en todos los escenarios restantes, pierdes
+            resultado= "Perdiste, pierdes una vida"  // en todos los escenarios restantes, pierdes
             vidasJugador -= 1;
         }        
     
