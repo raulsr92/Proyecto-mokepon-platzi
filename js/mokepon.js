@@ -3,16 +3,18 @@ let ataqueEnemigo;
 let resultado;
 let mascotaSeleccionada;
 
-let vidasJugador =0;
-let vidasEnemigo =0;
+let vidasJugador =3;
+let vidasEnemigo =3;
 
 let mokepones = [];
+
 
 function iniciarJuego() {
 
     // Clase 26 - Creando sistema de vidas
-    vidasJugador = 3; 
+    /*vidasJugador = 3; 
     vidasEnemigo = 3;
+    */
 
     let botonMascotaJugador = document.getElementById("boton-mascota");
     //Clase 23 Capturar los botones de ataque
@@ -222,6 +224,69 @@ function identificarCard(indice) {
 
 }
 
+function contadorVidasJugador(vidas) {
+
+        // Capturar elementos span donde se muestran las vidas del jugador y el enemigo
+
+        let showVidasJugador = document.getElementById("vidas-jugador");
+
+        switch (vidas) {
+            case 3:
+
+            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill"></i>
+                                            <i class="bi bi-suit-heart-fill"></i>
+                                            <i class="bi bi-suit-heart-fill"></i>`
+                break;
+            case 2:
+
+            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill"></i>
+                                            <i class="bi bi-suit-heart-fill"></i>` 
+                
+                break;
+            case 1:
+            
+            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill"></i>`
+                break;            
+            case 0:
+            showVidasJugador.innerHTML = ' ' 
+
+                break;            
+        }
+   
+}
+
+function contadorVidasOponente(vidas) {
+
+    // Capturar elementos span donde se muestran las vidas del jugador y el enemigo
+
+    let showVidasEnemigo = document.getElementById("vidas-enemigo");
+
+    switch (vidas) {
+        case 3:
+
+        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill"></i>
+                                        <i class="bi bi-suit-heart-fill"></i>
+                                        <i class="bi bi-suit-heart-fill"></i>`
+            break;
+        case 2:
+
+        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill"></i>
+                                        <i class="bi bi-suit-heart-fill"></i>` 
+            
+            break;
+        case 1:
+        
+        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill"></i>`
+            break;            
+        case 0:
+            showVidasEnemigo.innerHTML = ' ' 
+
+            break;            
+    }
+
+}
+
+
 function seleccionarMascotaJugador(){
 
     // Clase 20: capturar elemento <span></span>
@@ -282,10 +347,12 @@ function seleccionarMascotaJugador(){
         let moke6 = document.getElementById("pydos");
         */
 
+        /*
         // Clase 26: capturar elementos span donde se muestran las vidas del jugador y el enemigo
 
         let showVidasJugador = document.getElementById("vidas-jugador");
         let showVidasEnemigo = document.getElementById("vidas-enemigo");
+        */
 
         /*
         // Mostrar la mascota seleccionada
@@ -384,11 +451,17 @@ function seleccionarMascotaJugador(){
                 break;
         } 
         */
+
+
         seleccionarMascotaEnemigo();
 
         // Clase 26: mostrar vidas en span
-        showVidasJugador.innerHTML = vidasJugador
-        showVidasEnemigo.innerHTML = vidasEnemigo
+
+        contadorVidasJugador(vidasJugador)
+        contadorVidasOponente(vidasEnemigo)
+
+       /* showVidasJugador.innerHTML = vidasJugador
+        showVidasEnemigo.innerHTML = vidasEnemigo*/
 }
 
 // Clase 22: Crear funcion para obtener un numero aleatorio entre un rango
@@ -546,6 +619,10 @@ function ataqueAleatorioEnemigo() {
             obtenerResultado();
             //showAtaqueEnemigo.innerHTML = ataqueEnemigo
 
+
+            contadorVidasJugador(vidasJugador)
+            contadorVidasOponente(vidasEnemigo)
+            
             //Mostrar seccion de mensajes //
 
             hideANDShowHtmlElement("mostrar-mensajes");
@@ -616,11 +693,13 @@ function crearMensaje() {
 
     // Clase 26: volvemos a imprimir las vidas para que se actualice en el DOM
 
+    /*
     let showVidasJugador = document.getElementById("vidas-jugador");
     let showVidasEnemigo = document.getElementById("vidas-enemigo");
 
     showVidasJugador.innerHTML = vidasJugador
     showVidasEnemigo.innerHTML = vidasEnemigo
+    */
 
     // Preguntar si el jugador o enemigo tienen vidas (esto puede ir dentro de la función)
 
