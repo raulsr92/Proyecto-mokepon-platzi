@@ -226,26 +226,26 @@ function identificarCard(indice) {
 
 function contadorVidasJugador(vidas) {
 
-        // Capturar elementos span donde se muestran las vidas del jugador y el enemigo
+        // Capturar elemento span donde se muestra la vida del jugador en el juego
 
         let showVidasJugador = document.getElementById("vidas-jugador");
 
         switch (vidas) {
             case 3:
 
-            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill"></i>
-                                            <i class="bi bi-suit-heart-fill"></i>
-                                            <i class="bi bi-suit-heart-fill"></i>`
+            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill icon-heart"></i>
+                                            <i class="bi bi-suit-heart-fill icon-heart"></i>
+                                            <i class="bi bi-suit-heart-fill icon-heart"></i>`
                 break;
             case 2:
 
-            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill"></i>
-                                            <i class="bi bi-suit-heart-fill"></i>` 
+            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill icon-heart"></i>
+                                            <i class="bi bi-suit-heart-fill icon-heart"></i>` 
                 
                 break;
             case 1:
             
-            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill"></i>`
+            showVidasJugador.innerHTML = `<i class="bi bi-suit-heart-fill icon-heart"></i>`
                 break;            
             case 0:
             showVidasJugador.innerHTML = ' ' 
@@ -257,30 +257,29 @@ function contadorVidasJugador(vidas) {
 
 function contadorVidasOponente(vidas) {
 
-    // Capturar elementos span donde se muestran las vidas del jugador y el enemigo
+        // Capturar elemento span donde se muestra la vida del enemigo en el juego
 
     let showVidasEnemigo = document.getElementById("vidas-enemigo");
 
     switch (vidas) {
         case 3:
 
-        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill"></i>
-                                        <i class="bi bi-suit-heart-fill"></i>
-                                        <i class="bi bi-suit-heart-fill"></i>`
+        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill icon-heart"></i>
+                                        <i class="bi bi-suit-heart-fill icon-heart"></i>
+                                        <i class="bi bi-suit-heart-fill icon-heart"></i>`
             break;
         case 2:
 
-        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill"></i>
-                                        <i class="bi bi-suit-heart-fill"></i>` 
+        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill icon-heart"></i>
+                                        <i class="bi bi-suit-heart-fill icon-heart"></i>` 
             
             break;
         case 1:
         
-        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill"></i>`
+        showVidasEnemigo.innerHTML = `<i class="bi bi-suit-heart-fill icon-heart"></i>`
             break;            
         case 0:
             showVidasEnemigo.innerHTML = ' ' 
-
             break;            
     }
 
@@ -618,7 +617,6 @@ function ataqueAleatorioEnemigo() {
 
             obtenerResultado();
             //showAtaqueEnemigo.innerHTML = ataqueEnemigo
-
 
             contadorVidasJugador(vidasJugador)
             contadorVidasOponente(vidasEnemigo)

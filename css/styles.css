@@ -285,6 +285,8 @@ input[type=radio]{
 .card-mokepon-juego > div:nth-child(3) > div:nth-child(3){
     display: flex;
     column-gap: 10px;
+    align-items: center;
+
 }
 
 .card-mokepon-juego > div:nth-child(3) > div:nth-child(4){
@@ -513,3 +515,17 @@ input[type=radio]{
 .btn-style3:hover{
     background-color: #3E8C4A;
 }
+
+/*Sistema de Vidas*/
+
+.icon-heart{
+    font-size: 25px;
+    color: #FF77B7;
+    text-shadow: 0px 0px 8px #e3350d;
+}
+
+.text-mokepon-hearts{
+    display: flex;
+    column-gap: 10px;
+}
+
