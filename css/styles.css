@@ -284,8 +284,11 @@ input[type=radio]{
 
 .card-mokepon-juego > div:nth-child(3) > div:nth-child(3){
     display: flex;
-    column-gap: 10px;
+    column-gap: 40px;
     align-items: center;
+    width: 80%; /*Se le da un ancho al contenedor del texto y corazones para que al ir reduciendo vidas, no se realice un movimiento*/
+    justify-content: space-between; /*Se le da un alineamiento así al contenedor del texto y corazones para que al ir reduciendo vidas, no se realice un movimiento*/
+    height: 35px; /*Se le da una altura al contenedor del texto y corazones para que al desaparecer todos los corazones, no se unda la caja debido a que ahora la altura la define el texto*/
 
 }
 
