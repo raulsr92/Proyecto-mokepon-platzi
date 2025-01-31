@@ -8,6 +8,10 @@ let vidasEnemigo =3;
 
 let mokepones = [];
 
+let mokeponSeleccionadoJugador = []
+
+let mokeponSeleccionadoOponente = []
+
 
 function iniciarJuego() {
 
@@ -179,6 +183,72 @@ function iniciarJuego() {
         } )
 
     }
+
+
+}
+
+function dibujarCardsSegundaPantalla() {
+      // Dibujar cards de la segunda pantalla desde JS
+
+      let cardsPlayingContainer = document.querySelector(".cards-juego-container");
+
+      cardsPlayingContainer.innerHTML +=
+      `
+      <div class="card-mokepon-juego">
+                      <div>
+                          <h3>Jugador</h3>
+                      </div>
+   
+                      <div>
+                          <div>
+                              <div>
+                                  <img src=${mokeponSeleccionadoJugador[0].imagen} alt="">
+                              </div>
+                          </div>
+                      </div>
+                      <div>
+                          <p class="text-mokepon-subtitles">Mascota Seleccionada:</p>
+                          <p id="mascota-jugador" class="text-mokepon-name-clear">${mokeponSeleccionadoJugador[0].nombre}</p>
+                          <div>
+                              <p class="text-mokepon-subtitles">Vidas:</p>
+                              <p id="vidas-jugador" class="text-mokepon-hearts"> </p>
+                          </div>
+                          <div>
+                              <p style="display: ${mokeponSeleccionadoJugador[0].mostrar[0]};" class="water-attack-badge">${mokeponSeleccionadoJugador[0].ataques[0]}</p>
+                              <p style="display: ${mokeponSeleccionadoJugador[0].mostrar[1]};" class="fire-attack-badge">${mokeponSeleccionadoJugador[0].ataques[1]}</p>
+                              <p style="display: ${mokeponSeleccionadoJugador[0].mostrar[2]};" class="tierra-attack-badge">${mokeponSeleccionadoJugador[0].ataques[2]}</p>                            
+                          </div>
+                      </div>
+    </div>   
+  
+                  <div class="card-mokepon-juego">
+                      <div>
+                          <h3>Jugador</h3>
+                      </div>
+   
+                      <div>
+                          <div>
+                              <div>
+                                  <img src=${mokeponSeleccionadoOponente[0].imagen} alt="">
+                              </div>
+                          </div>
+                      </div>
+                      <div>
+                          <p class="text-mokepon-subtitles">Mascota Seleccionada:</p>
+                          <p id="mascota-enemigo" class="text-mokepon-name-clear">${mokeponSeleccionadoOponente[0].nombre}</p>
+                          <div>
+                              <p class="text-mokepon-subtitles">Vidas:</p>
+                              <p id="vidas-enemigo" class="text-mokepon-hearts"> </p>
+                          </div>
+                          <div>
+                              <p style="display: ${mokeponSeleccionadoOponente[0].mostrar[0]};" class="water-attack-badge">${mokeponSeleccionadoOponente[0].ataques[0]}</p>
+                              <p style="display: ${mokeponSeleccionadoOponente[0].mostrar[1]};" class="fire-attack-badge">${mokeponSeleccionadoOponente[0].ataques[1]}</p>
+                              <p style="display: ${mokeponSeleccionadoOponente[0].mostrar[2]};" class="tierra-attack-badge">${mokeponSeleccionadoOponente[0].ataques[2]}</p>                            
+                          </div>
+                      </div>
+                  </div>   
+      
+      `
 }
 
 function agregarMokepon(name, image, ID, types,display, array) {
@@ -303,25 +373,59 @@ function seleccionarMascotaJugador(){
             
                 if(i==0){
                     mascotaSeleccionada=1
-                    showMascotaJugador.innerHTML = "Hipodoge"
+                    //showMascotaJugador.innerHTML = "Hipodoge"
+
+                    //Guardar información de mokepon seleccionado por jugador
+
+                    mokeponSeleccionadoJugador.push(mokepones[0]);
+
+                    console.log(mokeponSeleccionadoJugador);
+
                 } else if(i==1){
                     mascotaSeleccionada=2
-                    showMascotaJugador.innerHTML = "Capipepo"
+                    //showMascotaJugador.innerHTML = "Capipepo"
+
+                    //Guardar información de mokepon seleccionado por jugador
+
+                    mokeponSeleccionadoJugador.push(mokepones[1]);
+                    
                 }else if(i==2){
                     mascotaSeleccionada=3
-                    showMascotaJugador.innerHTML = "Ratigueya"
+                    //showMascotaJugador.innerHTML = "Ratigueya"
+
+                    //Guardar información de mokepon seleccionado por jugador
+
+                    mokeponSeleccionadoJugador.push(mokepones[2]);
+
                 }else if(i==3){
                     mascotaSeleccionada=4
-                    showMascotaJugador.innerHTML = "Langostelvis"
+                    //showMascotaJugador.innerHTML = "Langostelvis"
+
+                    //Guardar información de mokepon seleccionado por jugador
+
+                    mokeponSeleccionadoJugador.push(mokepones[3]);
+
                 }else if(i==4){
                     mascotaSeleccionada=5
-                    showMascotaJugador.innerHTML = "Tucapalma"
+                   // showMascotaJugador.innerHTML = "Tucapalma"
+
+                    //Guardar información de mokepon seleccionado por jugador
+
+                    mokeponSeleccionadoJugador.push(mokepones[4]);
+
                 }else if(i==5){
                     mascotaSeleccionada=6
-                    showMascotaJugador.innerHTML = "Pydos"
+                    //showMascotaJugador.innerHTML = "Pydos"
+
+                    //Guardar información de mokepon seleccionado por jugador
+
+                    mokeponSeleccionadoJugador.push(mokepones[5]);
                 }
 
                 seleccion = true;
+
+                seleccionarMascotaEnemigo();
+                dibujarCardsSegundaPantalla()
 
                 hideANDShowHtmlElement("seleccionar-ataque");
                 hideANDShowHtmlElement("seleccionar-mascota")
@@ -452,7 +556,6 @@ function seleccionarMascotaJugador(){
         */
 
 
-        seleccionarMascotaEnemigo();
 
         // Clase 26: mostrar vidas en span
 
@@ -492,23 +595,35 @@ function seleccionarMascotaEnemigo(){
 
     switch (aleatorioEnemigo) {
         case 1:
-            showMascotaEnemigo.innerHTML = "Hipodoge"
+            //showMascotaEnemigo.innerHTML = "Hipodoge"
+
+            mokeponSeleccionadoOponente.push(mokepones[0]);
             break;
 
         case 2:
-            showMascotaEnemigo.innerHTML = "Capipepo"
+            //showMascotaEnemigo.innerHTML = "Capipepo"
+            mokeponSeleccionadoOponente.push(mokepones[1]);
+
             break;    
         case 3:
-            showMascotaEnemigo.innerHTML = "Ratigueya"
+            //showMascotaEnemigo.innerHTML = "Ratigueya"
+            mokeponSeleccionadoOponente.push(mokepones[2]);
+
             break;  
         case 4:
-            showMascotaEnemigo.innerHTML = "Langostelvis"
+            //showMascotaEnemigo.innerHTML = "Langostelvis"
+            mokeponSeleccionadoOponente.push(mokepones[3]);
+
             break;  
         case 5:
-            showMascotaEnemigo.innerHTML = "Tucapalma"
+            //showMascotaEnemigo.innerHTML = "Tucapalma"
+            mokeponSeleccionadoOponente.push(mokepones[4]);
+
             break;                
         default:
-            showMascotaEnemigo.innerHTML = "Pydos"
+            //showMascotaEnemigo.innerHTML = "Pydos"
+            mokeponSeleccionadoOponente.push(mokepones[5]);
+
             break;
     } 
 
