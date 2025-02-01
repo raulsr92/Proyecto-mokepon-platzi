@@ -23,6 +23,8 @@ El videojuego ha sido elaborado durante las sesiones del curso "Programación B�
 |Capítulo 9  - Elabora el 2° botón flotante con 💙CSS|[Ver 👀](https://youtu.be/coZcP_HOtCU?si=giGbhzTKdEZ4JMrR)       |
 |Capítulo 10  - Posicionamiento con 💙CSS y uso de 💛JS para impactar la lógica de la caja de mensajes del juego |[Ver 👀](https://youtu.be/oZpMokqk_d0?si=Mctz2twihj9inixg)       |
 |Capítulo 11  - Crear las tarjetas de los mokepones desde 💛JS a partir de un array de objetos |[Ver 👀](https://youtu.be/xUafUriu-20?si=motjhncpy03B1swc)       |
+|Capítulo 12  - Incorpora un Sistema de vidas gráfico para el juego con 💛JS |[Ver 👀](https://youtu.be/v26ISiQKu_o?si=VrfMsrqvsKG3l23r)       |
+|Capítulo 13  - Pasar información entre pantallas utilizando 💛JS |[Ver 👀](https://youtu.be/eQ29pQ3kIbc?si=9C2Yb24tCadZpMP0)       |
 
 _________
 
