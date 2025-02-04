@@ -187,7 +187,7 @@ function iniciarJuego() {
 
 }
 
-function dibujarCardsSegundaPantalla() {
+function dibujarCardsSegundaPantalla(id1, id2) {
       // Dibujar cards de la segunda pantalla desde JS
 
       let cardsPlayingContainer = document.querySelector(".cards-juego-container");
@@ -196,7 +196,7 @@ function dibujarCardsSegundaPantalla() {
       `
       <div class="card-mokepon-juego">
                       <div>
-                          <h3>Jugador</h3>
+                          <h3>${id1}</h3>
                       </div>
    
                       <div>
@@ -223,7 +223,7 @@ function dibujarCardsSegundaPantalla() {
   
                   <div class="card-mokepon-juego">
                       <div>
-                          <h3>Jugador</h3>
+                          <h3>${id2}</h3>
                       </div>
    
                       <div>
@@ -425,7 +425,7 @@ function seleccionarMascotaJugador(){
                 seleccion = true;
 
                 seleccionarMascotaEnemigo();
-                dibujarCardsSegundaPantalla()
+                dibujarCardsSegundaPantalla("Jugador", "Enemigo")
 
                 hideANDShowHtmlElement("seleccionar-ataque");
                 hideANDShowHtmlElement("seleccionar-mascota")
