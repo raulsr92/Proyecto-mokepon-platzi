@@ -844,7 +844,35 @@ function crearMensaje() {
 
     if(vidasJugador==0){
         crearMensajeFinal("Perdiste la batalla, te quedaste sin vidas.")
-        alert("Usted ha PERDIDO la partida")
+        /*alert("Usted ha PERDIDO la partida")*/
+
+        /*Alert con SweetAlert */
+                const swalWithBootstrapImages = Swal.mixin({
+                    customClass: {
+                      confirmButton: "btn btn-danger d-flex align-items-center column-gap-2 px-4 py-2 text-uppercase",
+                      popup:"shadow-lg rounded-4 overflow-hidden",
+                      image: "mt-0 ",
+                    },
+                    buttonsStyling: false
+                  });
+        
+                  swalWithBootstrapImages.fire({
+                    title: ` <h1 style="display:flex; justify-content: center; font-family: Roboto, serif; color: #E3350D; font-weight: 700"> Derrota </h1> `,
+                    text: "Usted ha PERDIDO la partida",
+                    imageUrl: "./images/derrota.jpg",
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: "Lost",
+                    confirmButtonColor: "#7e99a3",
+                    confirmButtonText:`
+                    ¡Jugar! <i class="fa-solid fa-thumbs-up"></i>
+                    `,
+                    width: "400px",
+                   
+                });
+        
+        /*Alert con SweetAlert */
+
         bloquearBotonAtaque()
 
         // Aparecer Sección del botón "Reiniciar"  
@@ -869,7 +897,7 @@ function crearMensaje() {
 
           swalWithBootstrapImages.fire({
             title: ` <h1 style="display:flex; justify-content: center; font-family: Roboto, serif; color: #4DAD5B; font-weight: 700"> Felicitaciones </h1> `,
-            text: "Ganaste la batalla, tu competidor se quedó sin vidas.",
+            text: "Usted ha GANADO la partida",
             imageUrl: "./images/victoria.jpg",
             imageWidth: 400,
             imageHeight: 200,
