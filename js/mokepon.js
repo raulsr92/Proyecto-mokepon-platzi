@@ -865,7 +865,7 @@ function crearMensaje() {
                     imageAlt: "Lost",
                     confirmButtonColor: "#7e99a3",
                     confirmButtonText:`
-                    ¡Jugar! <i class="fa-solid fa-thumbs-up"></i>
+                    ¡Jugar! <i class="fa-solid fa-play"></i>
                     `,
                     width: "400px",
                    
