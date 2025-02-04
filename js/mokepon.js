@@ -448,7 +448,7 @@ function seleccionarMascotaJugador(){
         swalWithBootstrapButtons.fire({
             title: ` <h1 style="display:flex; justify-content: center; font-family: Roboto, serif; color: #d91300; font-weight: 700"> Advertencia </h1> `,
             text: "No has seleccionado ninguna mascota",
-            imageUrl: "/images/empyPokeball1.png",
+            imageUrl: "./images/empyPokeball1.png",
             imageWidth: 200,
             imageHeight: 200,
             imageAlt: "Empty Pokeball",
