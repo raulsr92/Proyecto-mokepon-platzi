@@ -434,8 +434,34 @@ function seleccionarMascotaJugador(){
     }
 
     if(seleccion==false){
-        alert(`No has seleccionado ninguna mascota`)
+
+        /*alert(`No has seleccionado ninguna mascota`)*/
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: "btn btn-success d-flex align-items-center column-gap-2 px-4 py-2 text-uppercase",
+              popup:"shadow-lg",
+            },
+            buttonsStyling: false
+          });
+
+        swalWithBootstrapButtons.fire({
+            title: ` <h1 style="display:flex; justify-content: center; font-family: Roboto, serif; color: #d91300; font-weight: 700"> Advertencia </h1> `,
+            text: "No has seleccionado ninguna mascota",
+            imageUrl: "../images/empyPokeball1.png",
+            imageWidth: 200,
+            imageHeight: 200,
+            imageAlt: "Empty Pokeball",
+            confirmButtonColor: "#7e99a3",
+            confirmButtonText:`
+            ¡Entendido! <i class="fa-solid fa-thumbs-up"></i>
+            `,
+            width: "400px",
+           
+        });
     }
+
+    
 
 
     
