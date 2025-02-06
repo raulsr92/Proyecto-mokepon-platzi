@@ -15,6 +15,39 @@ let mokeponSeleccionadoOponente = []
 
 function iniciarJuego() {
 
+    // =================== Alert al cargar la página (Capitulo 15)
+
+    const swalWithBootstrap = Swal.mixin({
+        customClass: {
+          confirmButton: "btn btn-primary d-flex align-items-center column-gap-2 px-4 py-2 text-uppercase border border-2 ",
+          popup:"rounded-4  border border-4"
+          /*image: "mt-0 ",*/
+        },
+        buttonsStyling: false
+      });
+
+    swalWithBootstrap.fire({
+        title: "¡Bienvenido al juego Mokepón!",
+        text:"Haz click en el botón para iniciar el juego",
+        width: 600,
+        padding: "3em",
+        color: "#fff",
+        confirmButtonText:
+        `
+            ¡Jugar! <i class="fa-solid fa-gamepad"></i>
+        `,
+        background: "url(./images/alert9.jpg) bottom -70px right -40px no-repeat",
+        backdrop: `
+          rgba(237, 85, 100,1)
+          url("./images/background-6.jpg")
+          center
+          no-repeat 
+        `
+      });
+
+
+    // =================== Alert al cargar la página
+
     // Clase 26 - Creando sistema de vidas
     /*vidasJugador = 3; 
     vidasEnemigo = 3;
