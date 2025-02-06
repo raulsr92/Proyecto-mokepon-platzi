@@ -2,7 +2,11 @@
 
 El videojuego ha sido elaborado durante las sesiones del curso "Programación Básica" de [Platzi](https://platzi.com) con  HTML🧡, CSS 💙y JavaScript💛 y adicionalmente se han añadido estilos CSS y código JS de mi propia autoría.
 
-✅ Pantalla inicial:
+
+✅ Pantalla de Inicio con SweetAlert:
+![Vista principal](./images/Inicio.png)
+
+✅ 1era Pantalla:
 ![Vista principal](./images/Pantalla1.png)
 
 ✅ 2da Pantalla:
@@ -25,6 +29,8 @@ El videojuego ha sido elaborado durante las sesiones del curso "Programación B�
 |Capítulo 11  - Crear las tarjetas de los mokepones desde 💛JS a partir de un array de objetos |[Ver 👀](https://youtu.be/xUafUriu-20?si=motjhncpy03B1swc)       |
 |Capítulo 12  - Incorpora un Sistema de vidas gráfico para el juego con 💛JS |[Ver 👀](https://youtu.be/v26ISiQKu_o?si=VrfMsrqvsKG3l23r)       |
 |Capítulo 13  - Pasar información entre pantallas utilizando 💛JS |[Ver 👀](https://youtu.be/eQ29pQ3kIbc?si=9C2Yb24tCadZpMP0)       |
+|Capítulo 14  -  Crear una pantalla de inicio con SweetAlert, Bootstrap y 💛JS |[Ver 👀](https://youtu.be/0X3QNwjP71Q?si=hd0CLdDuoCLa77Gt)       |
+|Capítulo 15  - Transforma los mensajes de alerta con SweetAlert, Bootstrap y 💛JS |[Ver 👀](https://youtu.be/e0-dEhpHRhg)       |
 
 _________
 
