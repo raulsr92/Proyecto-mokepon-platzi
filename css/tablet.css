@@ -1,4 +1,10 @@
 
+/* Control de la altura de contenedores */
+
+body{
+    height: 100vh;
+}
+
 
 /* 1° PANTALLA */
 
@@ -17,6 +23,7 @@ main{
     padding: 20px 15px 20px 15px;
 }
 #seleccionar-mascota{
+    height: 100vh;
     padding: 30px 30px 40px 30px;
 }
 
@@ -33,12 +40,13 @@ main{
 
 #seleccionar-ataque{
     width: 95%;
+    height: 100vh;
     padding: 12px 15px 118px 15px;
-    row-gap: 0;
+    row-gap: 50px;
 }
 
 #seleccionar-ataque > div:nth-child(3){
-    top: calc(50% - 89.75px);
+    top: 20%;
     left: calc(50% - 72.23px);
 }
 
