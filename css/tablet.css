@@ -1,4 +1,7 @@
 
+
+/* 1° PANTALLA */
+
 .cards-container{
     grid-template-columns: repeat(3, 1fr);
     /*column-gap: 15px;*/
@@ -24,4 +27,44 @@ main{
 
 .text-button{
     font-size: 15px;
+}
+
+/* 2° PANTALLA */
+
+#seleccionar-ataque{
+    width: 95%;
+    padding: 12px 15px 118px 15px;
+    row-gap: 0;
+}
+
+#seleccionar-ataque > div:nth-child(3){
+    top: calc(50% - 89.75px);
+    left: calc(50% - 72.23px);
+}
+
+#seleccionar-ataque > div:nth-child(2){
+    padding: 0px 0px;
+}
+
+.card-mokepon-juego > div:nth-child(2) > div > div{
+    width: 150px;
+    height: 150px;
+}
+
+.card-mokepon-juego > div:nth-child(3){
+    width: 80%;
+}
+
+.card-mokepon-juego{
+    padding: 20px 0px 20px 0px;
+    border-bottom-left-radius: 60px;
+}
+
+.text-mokepon-subtitles{
+    display: none;
+}
+
+.card-mokepon-juego > div:nth-child(3) > div:nth-child(3){
+
+    justify-content: center; 
 }
