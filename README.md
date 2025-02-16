@@ -31,6 +31,8 @@ El videojuego ha sido elaborado durante las sesiones del curso "Programación B�
 |Capítulo 13  - Pasar información entre pantallas utilizando 💛JS |[Ver 👀](https://youtu.be/eQ29pQ3kIbc?si=9C2Yb24tCadZpMP0)       |
 |Capítulo 14  -  Crear una pantalla de inicio con SweetAlert, Bootstrap y 💛JS |[Ver 👀](https://youtu.be/0X3QNwjP71Q?si=hd0CLdDuoCLa77Gt)       |
 |Capítulo 15  - Transforma los mensajes de alerta con SweetAlert, Bootstrap y 💛JS |[Ver 👀](https://youtu.be/e0-dEhpHRhg)       |
+|Capítulo 16  - Adapta tu proyecto a diferentes dispositivos con Responsive Design - TABLET |[Ver 👀](https://youtu.be/kSjk8MoQj6k?si=nbQ5V1oFhNNHWIQN)       |
+|Capítulo 17  - Adapta tu proyecto a diferentes dispositivos con Responsive Design - TABLET (continuación) |[Ver 👀](https://youtu.be/L_6o_swvYiE?si=diDeQVKBbubnuV5U)       |
 
 _________
 
