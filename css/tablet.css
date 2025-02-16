@@ -76,3 +76,18 @@ main{
 
     justify-content: center; 
 }
+
+#mostrar-mensajes{
+    top: 590px;
+    width: 100%;
+    padding: 15px 45px;
+}
+
+#mostrar-mensajes > div > div > div {
+    row-gap: 0;
+    padding: 25px 15px 5px 15px;
+}
+
+.boton-flotante-r10-t20 {
+    right: 5%
+}
