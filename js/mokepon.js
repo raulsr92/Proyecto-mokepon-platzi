@@ -60,6 +60,11 @@ function iniciarJuego() {
     let btnTierra = document.getElementById("boton-tierra");
     let btnAgua = document.getElementById("boton-agua");
 
+    let btnFuego2 = document.getElementById("boton-fuego2");
+    let btnTierra2 = document.getElementById("boton-tierra2");
+    let btnAgua2 = document.getElementById("boton-agua2");
+
+
     //Clase 26 Capturar btn de capturar
 
     let btnReiniciar = document.getElementById("boton-reiniciar");
@@ -71,6 +76,10 @@ function iniciarJuego() {
     btnFuego.addEventListener("click",ataqueFuego);
     btnTierra.addEventListener("click",ataqueTierra);
     btnAgua.addEventListener("click",ataqueAgua);
+
+    btnFuego2.addEventListener("click",ataqueFuego);
+    btnTierra2.addEventListener("click",ataqueTierra);
+    btnAgua2.addEventListener("click",ataqueAgua);
 
     btnReiniciar.addEventListener("click", reiniciarJuego);
 
