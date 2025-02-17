@@ -69,3 +69,7 @@ h2{
 .card-mokepon-juego > div:nth-child(3){
     row-gap: 0px;
 }
+
+main{
+    row-gap: 0px;
+}
