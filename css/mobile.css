@@ -82,7 +82,21 @@ main{
     box-shadow: 1px 2px 10px 0px black;
 }
 
-#seleccionar-ataque > div:nth-child(3){
+#seleccionar-ataque > .btn-screen1{
     top: 12%;
     left: 70%;
+}
+#seleccionar-ataque > .btn-screen2{
+    top: 12%;
+    left: 70%;
+}
+
+/*Aparecer botones de pantallas móbiles*/
+
+#seleccionar-ataque >.btn-screen2{
+    display: flex;
+}
+
+#seleccionar-ataque >.btn-screen1{
+    display: none;
 }

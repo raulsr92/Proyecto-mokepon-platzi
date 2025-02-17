@@ -390,7 +390,16 @@ input[type=radio]{
 
 /* Posicionamiento de botones de ataque */
 
-#seleccionar-ataque > div:nth-child(3){
+#seleccionar-ataque > .btn-screen1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    top: calc(50% - 95.6px);
+    left: calc(50% - 82.98px);
+}
+
+#seleccionar-ataque > .btn-screen2{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -534,3 +543,8 @@ input[type=radio]{
     column-gap: 10px;
 }
 
+/*Desaparecer botones de pantallas móbiles*/
+
+#seleccionar-ataque >.btn-screen2{
+    display: none;
+}

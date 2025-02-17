@@ -45,7 +45,12 @@ main{
     row-gap: 50px;
 }
 
-#seleccionar-ataque > div:nth-child(3){
+#seleccionar-ataque > .btn-screen1{
+    top: 20%;
+    left: calc(50% - 72.23px);
+}
+
+#seleccionar-ataque > .btn-screen2{
     top: 20%;
     left: calc(50% - 72.23px);
 }
