@@ -227,7 +227,7 @@ function dibujarCardsSegundaPantalla(id1, id2) {
 
       cardsPlayingContainer.innerHTML +=
       `
-      <div class="card-mokepon-juego">
+      <div class="card-mokepon-juego card-juego-1">
                       <div>
                           <h3>${id1}</h3>
                       </div>
@@ -254,7 +254,7 @@ function dibujarCardsSegundaPantalla(id1, id2) {
                       </div>
     </div>   
   
-                  <div class="card-mokepon-juego">
+                  <div class="card-mokepon-juego card-juego-2">
                       <div>
                           <h3>${id2}</h3>
                       </div>

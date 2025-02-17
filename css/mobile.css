@@ -13,7 +13,35 @@ body{
     height: auto;
 }
 
+h2{
+    padding-right: 50px;
+}
+
+/* 2° PANTALLA */
 
 #seleccionar-ataque{
     height: auto;
+}
+
+#seleccionar-ataque > div:nth-child(2){
+    column-gap: 0px;
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-rows: repeat(2, auto);
+
+}
+
+.card-juego-1{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.card-juego-2{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.card-mokepon-juego > div:nth-child(2) > div > div{
+    width: 110px;
+    height: 110px;
 }
