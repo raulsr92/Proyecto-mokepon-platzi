@@ -1,4 +1,19 @@
 
-h1{
-    color: blueviolet;
+/* 1° PANTALLA */
+
+.cards-container{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+body{
+    height: auto;
+}
+
+#seleccionar-mascota{
+    height: auto;
+}
+
+
+#seleccionar-ataque{
+    height: auto;
 }
