@@ -100,3 +100,20 @@ main{
 #seleccionar-ataque >.btn-screen1{
     display: none;
 }
+
+/*Mejora de íconos de los botones*/
+
+.btn-screen2 img{
+    width: 35px;
+}
+
+.btn-screen2 button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-btn-movil{
+    background-color: #0C4CA3;
+    outline: 3px solid white;
+}
