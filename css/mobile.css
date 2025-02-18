@@ -117,3 +117,8 @@ main{
     background-color: #0C4CA3;
     outline: 3px solid white;
 }
+
+.color-btn-movil:hover{
+    background-color: #08234e;
+    outline: 3px solid white;
+}
