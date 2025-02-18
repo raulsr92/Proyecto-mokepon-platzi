@@ -122,3 +122,46 @@ main{
     background-color: #08234e;
     outline: 3px solid white;
 }
+
+/*Cajita de mensajes*/
+
+#mostrar-mensajes{
+    width: 45%;
+    top: 71%;
+    padding: 0;
+}
+
+#mostrar-mensajes > div{
+    padding: 4px;
+}
+
+#mostrar-mensajes > div > div{
+    padding: 9px 10px;
+}
+
+#mostrar-mensajes > div > div > div{
+    padding: 15px 10px 2px 10px
+    ;
+}
+
+#mostrar-mensajes img{
+    width: 35px;
+    top: -17.5px ;
+    left: calc(50% - 17.5px);
+}
+
+.text-batalla-jugador{
+    font-size: 14px;
+}
+
+.text-batalla-enemigo{
+    font-size: 14px;
+}
+
+.text-batalla-veredicto{
+    font-size: 14px;
+}
+
+.text-batalla-final{
+    font-size: 14px;
+}
