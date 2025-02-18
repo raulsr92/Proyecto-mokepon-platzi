@@ -127,7 +127,7 @@ main{
 
 #mostrar-mensajes{
     width: 45%;
-    top: 65%;
+    top: 60%;
     padding: 0;
 }
 
@@ -164,4 +164,15 @@ main{
 
 .text-batalla-final{
     font-size: 14px;
+}
+
+/*Boton flotante para REINICIAR*/
+
+.btn-style2{
+    padding: 15px 5px;
+    background-color: rgba(227, 53, 13, 0.8);
+}
+
+.icon-fijo{
+    font-size: 40px;
 }
