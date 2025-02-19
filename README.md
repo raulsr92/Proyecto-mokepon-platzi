@@ -33,6 +33,8 @@ El videojuego ha sido elaborado durante las sesiones del curso "Programación B�
 |Capítulo 15  - Transforma los mensajes de alerta con SweetAlert, Bootstrap y 💛JS |[Ver 👀](https://youtu.be/e0-dEhpHRhg)       |
 |Capítulo 16  - Adapta tu proyecto a diferentes dispositivos con Responsive Design - TABLET |[Ver 👀](https://youtu.be/kSjk8MoQj6k?si=nbQ5V1oFhNNHWIQN)       |
 |Capítulo 17  - Adapta tu proyecto a diferentes dispositivos con Responsive Design - TABLET (continuación) |[Ver 👀](https://youtu.be/L_6o_swvYiE?si=diDeQVKBbubnuV5U)       |
+|Capítulo 18  - Adapta tu proyecto a diferentes dispositivos con Responsive Design - CELULARES  |[Ver 👀](https://youtu.be/vm3qWdRMOY8?si=3UZrqPKBuFijpPTL)       |
+|Capítulo 19  - Adapta tu proyecto a diferentes dispositivos con Responsive Design - CELULARES  (continuación) |[Ver 👀](https://youtu.be/JcjiOJP1JNc?si=fy3f7CJiI2uRgCwD)       |
 
 _________
 
