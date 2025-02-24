@@ -53,21 +53,42 @@ function iniciarJuego() {
     vidasEnemigo = 3;
     */
 
-    let botonMascotaJugador = document.getElementById("boton-mascota");
+    /*let botonMascotaJugador = document.getElementById("boton-mascota");
+    console.log(botonMascotaJugador);*/
+
+    /*Usar función que crear variables cque representa a elementos HTML */
+
+    capturarElementoById("botonMascotaJugador", "boton-mascota");
+    
+
     //Clase 23 Capturar los botones de ataque
 
-    let btnFuego = document.getElementById("boton-fuego");
-    let btnTierra = document.getElementById("boton-tierra");
-    let btnAgua = document.getElementById("boton-agua");
+    /*let btnFuego = document.getElementById("boton-fuego");*/
+    capturarElementoById("btnFuego", "boton-fuego");
 
-    let btnFuego2 = document.getElementById("boton-fuego2");
-    let btnTierra2 = document.getElementById("boton-tierra2");
-    let btnAgua2 = document.getElementById("boton-agua2");
+    /*let btnTierra = document.getElementById("boton-tierra");*/
+    capturarElementoById("btnTierra", "boton-tierra");
+
+    /*let btnAgua = document.getElementById("boton-agua");*/
+    capturarElementoById("btnAgua", "boton-agua");
+
+
+    /*let btnFuego2 = document.getElementById("boton-fuego2");*/
+    capturarElementoById("btnFuego2", "boton-fuego2");
+
+    /*let btnTierra2 = document.getElementById("boton-tierra2");*/
+    capturarElementoById("btnTierra2", "boton-tierra2");
+
+    /*let btnAgua2 = document.getElementById("boton-agua2");*/
+    capturarElementoById("btnAgua2", "boton-agua2");
 
 
     //Clase 26 Capturar btn de capturar
 
-    let btnReiniciar = document.getElementById("boton-reiniciar");
+    /*let btnReiniciar = document.getElementById("boton-reiniciar");*/
+
+    capturarElementoById("btnReiniciar", "boton-reiniciar");
+
 
     // Eventos 
 
@@ -340,7 +361,9 @@ function contadorVidasJugador(vidas) {
 
         // Capturar elemento span donde se muestra la vida del jugador en el juego
 
-        let showVidasJugador = document.getElementById("vidas-jugador");
+        /*let showVidasJugador = document.getElementById("vidas-jugador");*/
+        capturarElementoById("showVidasJugador", "vidas-jugador");
+
 
         switch (vidas) {
             case 3:
@@ -371,7 +394,9 @@ function contadorVidasOponente(vidas) {
 
         // Capturar elemento span donde se muestra la vida del enemigo en el juego
 
-    let showVidasEnemigo = document.getElementById("vidas-enemigo");
+    /*let showVidasEnemigo = document.getElementById("vidas-enemigo");*/
+    capturarElementoById("showVidasEnemigo", "vidas-enemigo");
+
 
     switch (vidas) {
         case 3:
@@ -401,7 +426,9 @@ function contadorVidasOponente(vidas) {
 function seleccionarMascotaJugador(){
 
     // Clase 20: capturar elemento <span></span>
-        let showMascotaJugador = document.getElementById("mascota-jugador");
+        /*let showMascotaJugador = document.getElementById("mascota-jugador");*/
+        capturarElementoById("showMascotaJugador", "mascota-jugador");
+
         console.log(showMascotaJugador);
 
     let cardsArray = document.getElementsByClassName("card-mokepon");
@@ -820,7 +847,9 @@ function crearMensaje() {
 
    // 1° Crear párrafo y almacenarlo en una variable
 
-   let contendorParrafo = document.getElementById("mensajes");
+   /*let contendorParrafo = document.getElementById("mensajes");*/
+   capturarElementoById("contendorParrafo", "mensajes");
+
 
    if (contendorParrafo.children.length == 1) {
 
@@ -975,7 +1004,9 @@ function crearMensajeFinal(resultadoFinal) {
       
        // 2° Ubicar párrafo (al final de los párrafos agregados en cada partida)
    
-       let contendorParrafo = document.getElementById("mensajes");
+       /*let contendorParrafo = document.getElementById("mensajes");*/
+       capturarElementoById("contendorParrafo", "mensajes");
+
    
        contendorParrafo.append(parrafoFinal);
 
@@ -1104,7 +1135,7 @@ function hideANDShowHtmlElement(idElement) {
         // Capturar elemento
 
             let htmlElementToModify = document.getElementById(idElement);
-
+            
             console.log(htmlElementToModify);
 
         // Aplicar propiedad para desaparecer elemento o hacerlo aparecer en caso este desaparecido
@@ -1120,6 +1151,18 @@ function hideANDShowHtmlElement(idElement) {
     
 }
 
+
+/*Crear función que creará variables capturando ID de elementos de HTML*/
+
+function capturarElementoById(nameVariable,idElement) {
+
+    window[nameVariable] = document.getElementById(idElement);
+
+     console.log(window[nameVariable] );
+
+     return window[nameVariable] ;
+    
+}
 
 
 // Inicio del juego
