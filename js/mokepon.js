@@ -12,6 +12,23 @@ let mokeponSeleccionadoJugador = []
 
 let mokeponSeleccionadoOponente = []
 
+class Mokepon{
+
+    constructor(name, image, ID, types,display){
+        this.nombre = name;
+        this.imagen = image;
+        this.id = ID;
+        this.ataques= types;
+        this.mostrar = display
+    }
+} 
+
+/*
+
+let mokepon1 = new Mokepon("Hipodoge","./images/001.png","0001",["Agua", "Fuego", "Tierra"],["block", "none", "none"])
+
+*/
+
 
 function iniciarJuego() {
 
@@ -142,6 +159,15 @@ function iniciarJuego() {
         )
         */
 
+        crearObjetoyColeccionar("Mokepon1","Hipodoge", "./images/001.png", "0001", ["Agua", "Fuego", "Tierra"],["block", "none", "none"], mokepones)
+        crearObjetoyColeccionar("Mokepon2","Capipepo", "./images/002.png", "0002", ["Agua", "Fuego", "Tierra"],["none", "none", "block"], mokepones)
+        crearObjetoyColeccionar("Mokepon3","Ratigueya", "./images/003.png", "0003", ["Agua", "Fuego", "Tierra"],["none", "block", "none"], mokepones)
+        crearObjetoyColeccionar("Mokepon4","Langostelvis", "./images/004.png", "0004", ["Agua", "Fuego", "Tierra"],["block", "block", "none"], mokepones)
+        crearObjetoyColeccionar("Mokepon5","Tucapalma", "./images/005.png", "0005", ["Agua", "Fuego", "Tierra"],["block", "none", "block"], mokepones)
+        crearObjetoyColeccionar("Mokepon6","Pydos", "./images/006.png", "0006", ["Agua", "Fuego", "Tierra"],["none", "block", "block"], mokepones)
+
+
+        /*
         agregarMokepon(
             "Hipodoge",
             "./images/001.png",
@@ -195,7 +221,7 @@ function iniciarJuego() {
             ["none", "block", "block"],
             mokepones
         )
-
+*/
 
         let cardsContainer = document.querySelector(".cards-container");
 
@@ -314,19 +340,15 @@ function dibujarCardsSegundaPantalla(id1, id2) {
       `
 }
 
-function agregarMokepon(name, image, ID, types,display, array) {
 
-    array.push(
-        {
-            nombre: name,
-            imagen: image,
-            id: ID,
-            ataques: types,
-            mostrar: display
-        }
-    )
+function crearObjetoyColeccionar(objectName,name, image, ID, types,display, array) {
 
+    window[objectName] = new Mokepon(name,image,ID,types,display)
+
+    array.push(window[objectName])
 }
+
+
 
 function identificarCard(indice) {
 
